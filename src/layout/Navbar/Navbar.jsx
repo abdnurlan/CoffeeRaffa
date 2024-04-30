@@ -5,6 +5,7 @@ import Logo from '../../assets/kaffa_logo.png';
 import Logo_Light from '../../assets/kaffa_logo_light.png'
 import { FaBagShopping, FaBars, FaFacebookF, FaInstagram, FaSearchengin, FaTwitter, FaYoutube } from 'react-icons/fa6';
 import { FaTimes } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [clicked, setClicked] = useState(false);
@@ -49,11 +50,11 @@ const Navbar = () => {
               <div className={styles.product_counter}>
                 <span>1</span>
               </div>
-              <a href="">
+              <Link to="/basket">
                 <div className={styles.navbar_basket_icon}>
                   <FaBagShopping/>
                 </div>
-              </a>
+              </Link>
               <div className={styles.search}>
                 <FaSearchengin/>
               </div>
@@ -77,6 +78,9 @@ const Navbar = () => {
                 <li>Contact</li>
                 <li>Products</li>
               </ul>
+              <Link to="/basket">
+                <FaBagShopping/>
+              </Link>
             </div>
           </div>
           <Header></Header>

@@ -4,6 +4,8 @@ import Footer from "./layout/Footer/Footer";
 import Home from "./components/Home";
 import './App.css'
 import Beans from './assets/coffee-beans.png'
+import { Route, Routes } from "react-router-dom";
+import Basket from "./components/Basket/Basket";
 
 function App() {
   const [showGoTopButton, setShowGoTopButton] = useState(false);
@@ -25,10 +27,15 @@ function App() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  const navbar =  location.pathname === "/" ? <Navbar /> : '';
+
   return (
     <>
-      <Navbar />
-      <Home />
+      {navbar}
+        <Routes>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="/basket" element={<Basket />}></Route>
+        </Routes>
       <Footer />
       {showGoTopButton && (
         <button className="go-top-button" onClick={goToTop}>
