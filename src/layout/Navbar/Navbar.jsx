@@ -78,9 +78,16 @@ const Navbar = () => {
                 <li>Contact</li>
                 <li>Products</li>
               </ul>
-              <Link to="/basket">
-                <FaBagShopping/>
-              </Link>
+              <div className={styles.basket_mobile}>
+                <div className={styles.product_counter_mobile}>
+                  <span>1</span>
+                </div>
+                <Link to="/basket">
+                  <div className={styles.basket_mobile_icon}>
+                    <FaBagShopping/>
+                  </div>
+                </Link>
+              </div>
             </div>
           </div>
           <Header></Header>

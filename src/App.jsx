@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from "react";
+import { useLocation, Route, Routes } from "react-router-dom";
 import Navbar from "./layout/Navbar/Navbar";
 import Footer from "./layout/Footer/Footer";
 import Home from "./components/Home";
 import './App.css'
 import Beans from './assets/coffee-beans.png'
-import { Route, Routes } from "react-router-dom";
 import Basket from "./components/Basket/Basket";
+import BasketNavbar from "./components/Basket/BasketNavbar";
 
 function App() {
   const [showGoTopButton, setShowGoTopButton] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,15 +29,15 @@ function App() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  const navbar =  location.pathname === "/" ? <Navbar /> : '';
+  const isHomePage = location.pathname === "/";
 
   return (
     <>
-      {navbar}
-        <Routes>
-          <Route path="/" element={<Home />}></Route>
-          <Route path="/basket" element={<Basket />}></Route>
-        </Routes>
+      {isHomePage ? <Navbar /> : <BasketNavbar />}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/basket" element={<Basket />} />
+      </Routes>
       <Footer />
       {showGoTopButton && (
         <button className="go-top-button" onClick={goToTop}>

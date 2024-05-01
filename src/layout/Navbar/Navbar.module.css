@@ -106,6 +106,10 @@
   margin: auto;
 }
 
+.product_counter_mobile{
+  display: none;
+}
+
 .navbar_basket_icon svg, .search svg{
   transition: .5s;
 }
@@ -167,6 +171,10 @@
 }
 .navbar_links ul li:hover{
   color: #4d8b55;
+}
+
+.basket_mobile {
+  display: none;
 }
 
 
@@ -238,6 +246,46 @@
   .navbar_header {
     justify-content: space-between;
     padding: 24px 20px 0px;
+  }
+
+  .basket_mobile{
+    display: flex;
+    padding-top: 50px;
+    padding-left: 15px;
+  }
+
+  .basket_mobile_icon{
+    border: 2px solid #4d8b55;
+    border-radius: 50%;
+    padding: 10px;
+  }
+
+  .basket_mobile_icon svg{
+    transition: .5s;
+    color: #4d8b55;
+  }
+
+  .product_counter_mobile{
+    border-radius: 50%;
+    background-color: #4d8b55;
+    display: flex;
+    position: relative;
+    left: 50px;
+    top: 0px;
+    height: fit-content;
+  }
+  
+  .product_counter_mobile span{
+    width: 24px;
+    height: 24px;
+    font-size: 0.8em;
+    color: black;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 1px;
+    margin: auto;
   }
 }
 

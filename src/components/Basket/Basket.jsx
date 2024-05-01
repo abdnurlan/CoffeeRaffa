@@ -1,14 +1,12 @@
-import React from 'react'
-import BasketNavbar from './BasketNavbar'
+import React, { useEffect } from 'react'
 import BasketDashboard from './BasketDashboard'
 
 const Basket = () => {
-  return (
-    <>
-        <BasketNavbar />
-        <BasketDashboard />
-    </>
-  )
+    return (
+        <>
+            <BasketDashboard />
+        </>
+    )
 }
 
 export default Basket

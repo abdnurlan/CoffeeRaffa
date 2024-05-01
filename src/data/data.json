@@ -1,0 +1,33 @@
+[
+    {
+      "id": 1,
+      "name": "Ethiopia Arabica",
+      "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+      "quality": ["Pure Grade", "Amazing Vanilla Aroma", "Strong Roasting", "Ultra Grinding"],
+      "discount_price": 16.99,
+      "price": 19.99,
+      "star": 5,
+      "img": ""
+    },
+    {
+      "id": 2,
+      "name": "Colombian Supremo",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "quality": ["Pure Grade", "Rich Aroma", "Medium Roasting", "Fine Grinding"],
+      "discount_price": "",
+      "price": 21.99,
+      "star": 4,
+      "img": ""
+    },
+    {
+      "id": 3,
+      "name": "Brazil Santos",
+      "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "quality": ["Pure Grade", "Nutty Flavor", "Light Roasting", "Coarse Grinding"],
+      "discount_price": 14.99,
+      "price": 17.99,
+      "star": 4,
+      "img": ""
+    }
+  ]
+  

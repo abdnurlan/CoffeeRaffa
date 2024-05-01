@@ -6,6 +6,7 @@ import ProductDescription from './ProductDescription/ProductDescription'
 import Superiority from './Superiority/Superiority'
 import Statistics from './Statistics/Statistics'
 import WatchVideo from './WatchVideo/WatchVideo'
+import PopularProduct from './PopularProduct/PopularProduct'
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
         <Superiority />
         <WatchVideo />
         <Statistics />
+        <PopularProduct/>
     </>
   )
 }
