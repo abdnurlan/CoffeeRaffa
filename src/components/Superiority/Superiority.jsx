@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import styles from './Superiority.module.css';
-import Cup from '../../assets/cup.jpg';
-import Superiority_1 from '../../assets/superiority_1.png';
-import Superiority_2 from '../../assets/superiority_2.png';
-import Superiority_3 from '../../assets/superiority_3.png';
-import Superiority_4 from '../../assets/superiority_4.png';
-import Superiority_5 from '../../assets/superiority_5.png';
-import Superiority_6 from '../../assets/superiority_6.png';
+import Cup from '../../../public/assets/cup.jpg';
+import Superiority_1 from '../../../public/assets/superiority_1.png';
+import Superiority_2 from '../../../public/assets/superiority_2.png';
+import Superiority_3 from '../../../public/assets/superiority_3.png';
+import Superiority_4 from '../../../public/assets/superiority_4.png';
+import Superiority_5 from '../../../public/assets/superiority_5.png';
+import Superiority_6 from '../../../public/assets/superiority_6.png';
 
 const Superiority = () => {
   const [showCup, setShowCup] = useState(false);

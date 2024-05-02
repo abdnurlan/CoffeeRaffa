@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import styles from './ProductDescription.module.css';
-import Stamp from '../../assets/stamp.png'
+import Stamp from '../../../public/assets/stamp.png'
 
 const ProductDescription = () => {
   const [coffeeBackgroundPosition, setCoffeeBackgroundPosition] = useState('center');

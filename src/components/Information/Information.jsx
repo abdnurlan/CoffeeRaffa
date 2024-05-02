@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Information.module.css';
-import Information_Girl from '../../assets/information_girl.jpg';
+import Information_Girl from '../../../public/assets/information_girl.jpg';
 import { FaFileAlt, FaPhoneSquareAlt } from 'react-icons/fa';
 
 const Information = () => {

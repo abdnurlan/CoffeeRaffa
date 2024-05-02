@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import styles from './Navbar.module.css';
 import Header from '../../components/Header/Header';
-import Logo from '../../assets/kaffa_logo.png';
-import Logo_Light from '../../assets/kaffa_logo_light.png'
+import Logo from '../../../public/assets/kaffa_logo.png';
+import Logo_Light from '../../../public/assets/kaffa_logo_light.png'
 import { FaBagShopping, FaBars, FaFacebookF, FaInstagram, FaSearchengin, FaTwitter, FaYoutube } from 'react-icons/fa6';
 import { FaTimes } from 'react-icons/fa';
 import { Link } from 'react-router-dom';

@@ -1,5 +1,5 @@
 .footer_bg{
-    background: url('../../assets/footer-bg.jpg');
+    background: url('../../../public/assets/footer-bg.jpg');
 }
 
 .footer_section{
@@ -26,7 +26,7 @@
 
 .footer_text{
     line-height: 1.5;
-    font-size: 16px;
+    font-size: 14px;
     color: #FFFFFF8c;
 }
 
@@ -57,7 +57,7 @@
 .contact_info_header{
     color: #4d8b55;
     font-size: 24px;
-    font-weight: 900;
+    font-weight: 700;
     position: relative;
 }
 
@@ -91,7 +91,7 @@
 
 .location_link h3:nth-child(1), .contact_phones_link h3:nth-child(1){
     color: #4d8b55;
-    font-weight: 900;
+    font-weight: 600;
 }
 
 .location_link h3:nth-child(2), .contact_phones_link h3:nth-child(2){
@@ -108,6 +108,7 @@
     color: white;
     font-size: 1em;
     text-align: center;
+    font-weight: 300;
 }
 
 @media screen and (max-width: 992px){

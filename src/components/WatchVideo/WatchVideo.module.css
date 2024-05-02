@@ -1,5 +1,5 @@
 .bg {
-    background: url('../../assets/grow-video-bg.jpg');
+    background: url('../../../public/assets/grow-video-bg.jpg');
     height: 100vh;
 }
 
@@ -19,7 +19,7 @@
 .video_container h2:nth-child(1) {
     color: #4d8b55;
     font-size: 80px;
-    font-weight: 900;
+    font-weight: 700;
     padding-bottom: 30px;
     text-align: center;
 }
@@ -27,7 +27,7 @@
 .video_container h2:nth-child(2) {
     color: white;
     font-size: 80px;
-    font-weight: 900;
+    font-weight: 700;
     padding-bottom: 30px;
     text-align: center;
 }

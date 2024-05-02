@@ -4,7 +4,7 @@ import Navbar from "./layout/Navbar/Navbar";
 import Footer from "./layout/Footer/Footer";
 import Home from "./components/Home";
 import './App.css'
-import Beans from './assets/coffee-beans.png'
+import Beans from '../public/assets/coffee-beans.png'
 import Basket from "./components/Basket/Basket";
 import BasketNavbar from "./components/Basket/BasketNavbar";
 

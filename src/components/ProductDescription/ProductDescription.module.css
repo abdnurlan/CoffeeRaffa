@@ -9,7 +9,7 @@
   padding: 22px 30px;
   width: 260px;
   font-size: 14px;
-  font-weight: 900;
+  font-weight: 700;
   color: white;
   cursor: pointer;
   display: inline-block;
@@ -45,7 +45,7 @@
 }
 
 .coffee_image {
-  background: url('../../assets/aroma_photo.jpg') repeat-y center;
+  background: url('../../../public/assets/aroma_photo.jpg') repeat-y center;
   background-size: 100% auto;
   width: 33%;
   height: auto;
@@ -54,7 +54,7 @@
 }
 
 .girl_image {
-  background: url('../../assets/aroma_photo_02.jpg') repeat-y center;
+  background: url('../../../public/assets/aroma_photo_02.jpg') repeat-y center;
   background-size: 100% auto;
   width: 33%;
   height: auto;
@@ -71,7 +71,7 @@
 }
 
 .branch_bg {
-  background: url('../../assets/branch-bg.png') no-repeat right bottom;
+  background: url('../../../public/assets/branch-bg.png') no-repeat right bottom;
 }
 
 .description {
@@ -84,7 +84,7 @@
 .h2_black h2,
 .h2_white h2 {
   font-size: 64px;
-  font-weight: 900;
+  font-weight: 700;
 }
 
 .h2_black {

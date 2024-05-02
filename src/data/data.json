@@ -4,10 +4,10 @@
       "name": "Ethiopia Arabica",
       "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
       "quality": ["Pure Grade", "Amazing Vanilla Aroma", "Strong Roasting", "Ultra Grinding"],
-      "discount_price": 16.99,
+      "discount_price": "15.99",
       "price": 19.99,
       "star": 5,
-      "img": ""
+      "img": "assets/product-1.jpg"
     },
     {
       "id": 2,
@@ -28,6 +28,16 @@
       "price": 17.99,
       "star": 4,
       "img": ""
+    },
+    {
+      "id": 5,
+      "name": " Ayazin Kofesi",
+      "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+      "quality": ["Pure Grade", "Amazing Vanilla Aroma", "Strong Roasting", "Ultra Grinding"],
+      "discount_price": "",
+      "price": 25.99,
+      "star": 5,
+      "img": "assets/product-1.jpg"
     }
   ]
   

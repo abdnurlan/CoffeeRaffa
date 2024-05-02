@@ -1,5 +1,5 @@
 .background {
-  background-image: url('../../assets/header-coffee-bg.jpg');
+  background-image: url('../../../public/assets/header-coffee-bg.jpg');
   background-size: cover;
   background-position: center;
   height: 95vh;
@@ -215,7 +215,7 @@
   }
 
   .navbar_mobile ul li{
-    font-weight: 900;
+    font-weight: 700;
     font-size: 22px;
   }
 

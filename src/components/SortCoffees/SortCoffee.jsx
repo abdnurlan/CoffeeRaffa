@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './SortCoffee.module.css'
-import GreenCoffee from '../../assets/green_coffee.jpg'
+import GreenCoffee from '../../../public/assets/green_coffee.jpg'
 
 const SortCoffee = () => {
   return (

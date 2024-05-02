@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './Footer.module.css'
-import Logo from '../../assets/kaffa_logo.png'
+import Logo from '../../../public/assets/kaffa_logo.png'
 import { FaFacebookF, FaInstagram, FaLocationDot, FaPhoneVolume, FaTwitter, FaYoutube } from 'react-icons/fa6'
 
 const Footer = () => {
