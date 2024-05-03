@@ -17,7 +17,7 @@
       "discount_price": "",
       "price": 21.99,
       "star": 4,
-      "img": ""
+      "img": "assets/product-1.jpg"
     },
     {
       "id": 3,
@@ -27,7 +27,7 @@
       "discount_price": 14.99,
       "price": 17.99,
       "star": 4,
-      "img": ""
+      "img": "assets/product-1.jpg"
     },
     {
       "id": 5,
@@ -37,7 +37,7 @@
       "discount_price": "",
       "price": 25.99,
       "star": 5,
-      "img": "assets/product-1.jpg"
+      "img": "assets/product-2.png"
     }
   ]
   

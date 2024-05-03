@@ -4,13 +4,19 @@ import Data from '../../data/data.json';
 
 const PopularProduct = () => {
   const [currentProductIndex, setCurrentProductIndex] = useState(0);
+  const [isChangingProduct, setIsChangingProduct] = useState(false); // State to track product change
+
   const fiveStarProducts = Data.filter(product => product.star === 5);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentProductIndex(prevIndex =>
-        prevIndex === fiveStarProducts.length - 1 ? 0 : prevIndex + 1
-      );
+      setIsChangingProduct(true); // Trigger product change animation
+      setTimeout(() => {
+        setCurrentProductIndex(prevIndex =>
+          prevIndex === fiveStarProducts.length - 1 ? 0 : prevIndex + 1
+        );
+        setIsChangingProduct(false); // Reset animation state after product change
+      }, 500); // Adjust this timing according to your preference
     }, 5000);
 
     return () => clearInterval(interval);
@@ -57,17 +63,17 @@ const PopularProduct = () => {
     <div className='container'>
       <div className={styles.popular_product_container}>
         <div className={styles.header}>
-            <div className={styles.header_h6}>
-                <h6>Online Store</h6>
-            </div>
-            <div className={styles.header_h3}>
-                <h3>Popular Product</h3>
-            </div>
-            <div className={styles.header_text}>
-                <p>Maecenas dapibus mattis eros, at fermentum sapien malesuada sit amet. Quisque in sollicitudin eros. Aliquam eget sapien sed orci accumsan interdum at ac mi.</p>
-            </div>
+          <div className={styles.header_h6}>
+            <h6>Online Store</h6>
+          </div>
+          <div className={styles.header_h3}>
+            <h3>Popular Product</h3>
+          </div>
+          <div className={styles.header_text}>
+            <p>Maecenas dapibus mattis eros, at fermentum sapien malesuada sit amet. Quisque in sollicitudin eros. Aliquam eget sapien sed orci accumsan interdum at ac mi.</p>
+          </div>
         </div>
-        <div className={styles.popular_product_details}>
+        <div className={`${styles.popular_product_details} ${isChangingProduct ? styles.product_container_transition : ''}`}>
           <div className={styles.popular_product_image}>
             <img src={currentProduct.img} alt="" />
           </div>
@@ -99,7 +105,7 @@ const PopularProduct = () => {
               )}
             </div>
             <div className={styles.buttons}>
-                <div className={`${styles.button}`}>Add to cart</div>
+              <div className={`${styles.button}`}>Add to cart</div>
             </div>
           </div>
         </div>
