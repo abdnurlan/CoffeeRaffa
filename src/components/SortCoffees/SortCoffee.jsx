@@ -9,7 +9,7 @@ const SortCoffee = () => {
         <div className='container'>
             <div className={styles.information}>
                 <div className={styles.information_text}>
-                    <p>Morbi eu varius neque, a ultricies sem. Fusce vitae convallis mi. Etiam dictum arcu posuere mauris <span style={{color: '#4d8b55'}}>semper accumsan</span>. Ut vel nibh a risus hendrerit efficitur. Integer ligula lacus, placerat et egestas vel, ultricies ac purus.</p>
+                    <p>Dünya qəhvə ekspertlərinin rəyinə əsasən, ən yaxşı qəhvə qovrulduğu andan <span style={{color: '#4d8b55'}}>7-21 gün</span> aralığında içilən qəhvədir.</p>
                 </div>
                 <div className={styles.coffee_sorts}>
                     <div className={styles.coffee_sort}>
