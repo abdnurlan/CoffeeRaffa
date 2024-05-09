@@ -127,6 +127,10 @@
     .contact_info_header::after{
         width: 100%;
     }
+    .contact_info_location, .contact_phones{
+        flex-direction: column;
+        gap: 10px;
+    }
 }
 
 @media screen and (max-width: 992px){

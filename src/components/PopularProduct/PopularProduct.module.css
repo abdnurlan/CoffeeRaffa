@@ -70,7 +70,7 @@
 }
 
 .original_price{
-    color: #adadad;
+    color: #adadad !important;
     font-size: 24px;
     font-weight: 700;
     position: relative;
@@ -94,7 +94,7 @@
 }
 
 .discount_price{
-    color: #D12323;
+    color: #D12323 !important;
     font-size: 24px;
     font-weight: 700;
     position: relative;
@@ -148,7 +148,7 @@
 
 .stars {
     font-size: 20px; 
-    color: #e2b239; 
+    color: #e2b239 !important; 
 }
   
 .stars span {

@@ -4,19 +4,19 @@ import Data from '../../data/data.json';
 
 const PopularProduct = () => {
   const [currentProductIndex, setCurrentProductIndex] = useState(0);
-  const [isChangingProduct, setIsChangingProduct] = useState(false); // State to track product change
+  const [isChangingProduct, setIsChangingProduct] = useState(false);
 
   const fiveStarProducts = Data.filter(product => product.star === 5);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setIsChangingProduct(true); // Trigger product change animation
+      setIsChangingProduct(true);
       setTimeout(() => {
         setCurrentProductIndex(prevIndex =>
           prevIndex === fiveStarProducts.length - 1 ? 0 : prevIndex + 1
         );
-        setIsChangingProduct(false); // Reset animation state after product change
-      }, 500); // Adjust this timing according to your preference
+        setIsChangingProduct(false); 
+      }, 500);
     }, 5000);
 
     return () => clearInterval(interval);

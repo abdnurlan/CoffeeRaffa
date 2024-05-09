@@ -135,6 +135,9 @@
   display: none !important;
   z-index: 1000;
   cursor: pointer;
+  position: absolute;
+  right: 5%;
+  top: 6%;
 }
 
 .times{
