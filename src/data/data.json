@@ -7,7 +7,7 @@
       "discount_price": "15.99",
       "price": 19.99,
       "star": 5,
-      "img": "assets/product-1.jpg"
+      "img": "assets/product-1.png"
     },
     {
       "id": 2,
@@ -17,7 +17,7 @@
       "discount_price": "",
       "price": 21.99,
       "star": 4,
-      "img": "assets/product-1.jpg"
+      "img": "assets/product-2.png"
     },
     {
       "id": 3,
@@ -27,7 +27,7 @@
       "discount_price": 14.99,
       "price": 17.99,
       "star": 4,
-      "img": "assets/product-1.jpg"
+      "img": "assets/product-3.png"
     },
     {
       "id": 5,
@@ -37,7 +37,7 @@
       "discount_price": "",
       "price": 25.99,
       "star": 5,
-      "img": "assets/product-2.png"
+      "img": "assets/product-3.png"
     }
   ]
   

@@ -28,19 +28,9 @@ const Navbar = () => {
         <div className='container'>
           <div className={styles.navbar_header}>
             <div className={styles.navbar_medias}>
-              <h4>Follow us</h4>
+              <h4>Bizi İzləyin</h4>
               <div className={styles.line}></div>
-              <a href="">
-                <div className={styles.navbar_media}>
-                  <FaTwitter />
-                </div>
-              </a>
-              <a href="">
-                <div className={styles.navbar_media}>
-                  <FaFacebookF />
-                </div>
-              </a>
-              <a href="">
+              <a href="https://www.instagram.com/coffee.raffa/" target="_blank">
                 <div className={styles.navbar_media}>
                   <FaInstagram />
                 </div>
@@ -80,11 +70,10 @@ const Navbar = () => {
             </div>
             <div className={styles.navbar_mobile}>
               <ul>
-                <li>Home</li>
-                <li>About</li>
-                <li>Shop</li>
-                <li>Contact</li>
-                <li>Products</li>
+                <li>Ana Səhifə</li>
+                <li>Haqqımızda</li>
+                <li>Əlaqə</li>
+                <li>Məhsullar</li>
               </ul>
               <div className={styles.basket_mobile}>
                 <div className={styles.product_counter_mobile}>

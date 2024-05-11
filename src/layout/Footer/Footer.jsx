@@ -16,21 +16,20 @@ const Footer = () => {
               <p>Etiam consequat sem ullamcorper, euismod metus sit amet, tristique justo. Vestibulum mattis, nisi ut.</p>
             </div>
             <div className={styles.social_icons}>
-              <FaTwitter />
               <FaFacebookF />
               <FaYoutube />
               <FaInstagram />
             </div>
           </div>
           <div className={styles.contact_info}>
-            <div className={styles.contact_info_header}>Contact Info</div>
+            <div className={styles.contact_info_header}>Əlaqə</div>
             <div className={styles.contact_info_location}>
               <div className={styles.location_icon}>
                 <FaLocationDot />
               </div>
               <div className={styles.location_link}>
-                <h3>Our location : </h3>
-                <h3>Rio de Janeiro, RJ Brazil, 04103 Route</h3>
+                <h3>Ünvan : </h3>
+                <h3>Bakı şəhəri, Nərimanov rayonu., Daş karxanası küç. 154</h3>
               </div>
             </div>
             <div className={styles.contact_phones}>
@@ -39,28 +38,8 @@ const Footer = () => {
               </div>
               <div className={styles.contact_phones_link}>
                 <h3>Phones : </h3>
-                <h3>+994 55 555 55 55</h3>
-              </div>
-            </div>
-          </div>
-          <div className={styles.subscribe}>
-            <div className={styles.contact_info_header}>Subscribe</div>
-            <div className={styles.contact_info_location}>
-              <div className={styles.location_icon}>
-                <FaLocationDot />
-              </div>
-              <div className={styles.location_link}>
-                <h3>Our location : </h3>
-                <h3>Rio de Janeiro, RJ Brazil, 04103 Route</h3>
-              </div>
-            </div>
-            <div className={styles.contact_phones}>
-              <div className={styles.contact_phones_icon}>
-                <FaPhoneVolume />
-              </div>
-              <div className={styles.contact_phones_link}>
-                <h3>Phones : </h3>
-                <h3>+994 55 555 55 55</h3>
+                <h3 className={styles.contact_phones_number}>+994 50 888 20 60</h3>
+                <h3 className={styles.contact_phones_number}>+994 55 888 20 60</h3>
               </div>
             </div>
           </div>
