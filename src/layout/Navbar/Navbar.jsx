@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import styles from './Navbar.module.css';
 import Header from '../../components/Header/Header';
-import Logo from '../../../public/assets/kaffa_logo.png';
-import Logo_Light from '../../../public/assets/kaffa_logo_light.png';
-import { FaBagShopping, FaBars, FaFacebookF, FaInstagram, FaSearchengin, FaTwitter, FaYoutube } from 'react-icons/fa6';
+import Logo from '/assets/kaffa_logo.png';
+import Logo_Light from '/assets/kaffa_logo_light.png';
+import { FaBagShopping, FaBars, FaInstagram, FaSearchengin, FaYoutube } from 'react-icons/fa6';
 import { FaTimes } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
@@ -22,6 +22,10 @@ const Navbar = () => {
     setClicked(!clicked);
   };
 
+  const closeMenu = () => {
+    setClicked(false);
+  };
+
   return (
     <>
       <div className={styles.background}>
@@ -30,12 +34,12 @@ const Navbar = () => {
             <div className={styles.navbar_medias}>
               <h4>Bizi İzləyin</h4>
               <div className={styles.line}></div>
-              <a href="https://www.instagram.com/coffee.raffa/" target="_blank">
+              <a href="https://www.instagram.com/coffee.raffa/" target="_blank" onClick={closeMenu}>
                 <div className={styles.navbar_media}>
                   <FaInstagram />
                 </div>
               </a>
-              <a href="">
+              <a href="" onClick={closeMenu}>
                 <div className={styles.navbar_media}>
                   <FaYoutube />
                 </div>
@@ -48,7 +52,7 @@ const Navbar = () => {
               <div className={styles.product_counter}>
                 <span>1</span>
               </div>
-              <Link to="/basket">
+              <Link to="/basket" onClick={closeMenu}>
                 <div className={styles.navbar_basket_icon}>
                   <FaBagShopping />
                 </div>
@@ -70,16 +74,16 @@ const Navbar = () => {
             </div>
             <div className={styles.navbar_mobile}>
               <ul>
-                <li>Ana Səhifə</li>
-                <li>Haqqımızda</li>
-                <li>Əlaqə</li>
-                <li>Məhsullar</li>
+                <li><a href="#header" onClick={closeMenu}>Ana Səhifə</a></li>
+                <li><a href="#about" onClick={closeMenu}>Haqqımızda</a></li>
+                <li><a href="#products" onClick={closeMenu}>Məhsullar</a></li>
+                <li><a href="#contact" onClick={closeMenu}>Əlaqə</a></li>
               </ul>
               <div className={styles.basket_mobile}>
                 <div className={styles.product_counter_mobile}>
                   <span>1</span>
                 </div>
-                <Link to="/basket">
+                <Link to="/basket" onClick={closeMenu}>
                   <div className={styles.basket_mobile_icon}>
                     <FaBagShopping />
                   </div>

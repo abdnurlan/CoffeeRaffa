@@ -5,7 +5,7 @@
 .footer_section{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 60px 0px;
     align-items: center;
 }

@@ -1,12 +1,12 @@
 import React from "react";
 import styles from "./Information.module.css";
-import Information_Girl from "../../../public/assets/information_girl.jpg";
+import Information_Girl from "/assets/information_girl.jpg";
 import { FaFileAlt, FaPhoneSquareAlt } from "react-icons/fa";
 
 const Information = () => {
   return (
     <>
-      <div className="container">
+      <div className="container" id="about">
         <div className={styles.information}>
           <div className={styles.texts}>
             <div className={`${styles.green_word} ${styles["h3"]}`}>

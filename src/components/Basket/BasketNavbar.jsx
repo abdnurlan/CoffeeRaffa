@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './Basket.module.css'
 import { Link } from 'react-router-dom'
 import { FaBagShopping, FaPhoneVolume } from 'react-icons/fa6'
-import Logo from '../../../public/assets/kaffa_logo.png'
+import Logo from '/assets/kaffa_logo.png'
 import BasketHeader from './BasketHeader'
 
 const BasketNavbar = () => {

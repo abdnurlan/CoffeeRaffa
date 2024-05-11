@@ -60,7 +60,7 @@ const PopularProduct = () => {
   const currentProduct = fiveStarProducts[currentProductIndex];
 
   return (
-    <div className='container'>
+    <div className='container' id='products'>
       <div className={styles.popular_product_container}>
         <div className={styles.header}>
           <div className={styles.header_h6}>
