@@ -1,43 +1,162 @@
 [
-    {
-      "id": 1,
-      "name": "Ethiopia Arabica",
-      "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
-      "quality": ["Pure Grade", "Amazing Vanilla Aroma", "Strong Roasting", "Ultra Grinding"],
-      "discount_price": "15.99",
-      "price": 19.99,
-      "star": 5,
-      "img": "assets/product-1.png"
-    },
-    {
-      "id": 2,
-      "name": "Colombian Supremo",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "quality": ["Pure Grade", "Rich Aroma", "Medium Roasting", "Fine Grinding"],
-      "discount_price": "",
-      "price": 21.99,
-      "star": 4,
-      "img": "assets/product-2.png"
-    },
-    {
-      "id": 3,
-      "name": "Brazil Santos",
-      "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      "quality": ["Pure Grade", "Nutty Flavor", "Light Roasting", "Coarse Grinding"],
-      "discount_price": 14.99,
-      "price": 17.99,
-      "star": 4,
-      "img": "assets/product-3.png"
-    },
-    {
-      "id": 5,
-      "name": " Ayazin Kofesi",
-      "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
-      "quality": ["Pure Grade", "Amazing Vanilla Aroma", "Strong Roasting", "Ultra Grinding"],
-      "discount_price": "",
-      "price": 25.99,
-      "star": 5,
-      "img": "assets/product-3.png"
-    }
-  ]
-  
+  {
+    "id": 1,
+    "name": "Kenyan AA",
+    "description": "Delight in the bold flavors of Kenyan AA coffee, with its rich aroma and robust taste. Sourced from the highlands of Kenya, this coffee offers a unique and satisfying experience.",
+    "quality": ["Pure Grade", "Bold Flavor Profile", "Dark Roasting", "Fine Grinding"],
+    "discount_price": "",
+    "price": 22.99,
+    "star": 4,
+    "img": "assets/product-1.png"
+  },
+  {
+    "id": 2,
+    "name": "Guatemalan Antigua",
+    "description": "Experience the smoothness and complexity of Guatemalan Antigua coffee, known for its well-balanced flavor profile and hints of chocolate and citrus.",
+    "quality": ["Pure Grade", "Complex Flavor", "Medium Roasting", "Medium Grinding"],
+    "discount_price": "",
+    "price": 18.99,
+    "star": 5,
+    "img": "assets/product-2.png"
+  },
+  {
+    "id": 3,
+    "name": "Peruvian Organic",
+    "description": "Indulge in the purity of Peruvian Organic coffee, grown in the lush valleys of the Andes. Enjoy its clean taste and floral undertones, while supporting sustainable farming practices.",
+    "quality": ["Organic", "Clean Taste", "Light Roasting", "Coarse Grinding"],
+    "discount_price": "",
+    "price": 19.99,
+    "star": 5,
+    "img": "assets/product-3.png"
+  },
+  {
+    "id": 4,
+    "name": "Indonesian Sumatra Mandheling",
+    "description": "Embark on a journey of exotic flavors with Indonesian Sumatra Mandheling coffee, featuring earthy notes and a full-bodied texture. Sourced from the volcanic soils of Sumatra.",
+    "quality": ["Pure Grade", "Exotic Flavor", "Dark Roasting", "Coarse Grinding"],
+    "discount_price": "",
+    "price": 24.99,
+    "star": 4,
+    "img": "assets/product-1.png"
+  },
+  {
+    "id": 5,
+    "name": "Costa Rican Tarrazu",
+    "description": "Revel in the smoothness of Costa Rican Tarrazu coffee, known for its bright acidity and clean finish. Grown in the renowned Tarrazu region, this coffee is a true delight.",
+    "quality": ["Pure Grade", "Bright Acidity", "Medium Roasting", "Medium Grinding"],
+    "discount_price": "",
+    "price": 20.99,
+    "star": 5,
+    "img": "assets/product-1.png"
+  },
+  {
+    "id": 6,
+    "name": "Vietnamese Robusta",
+    "description": "Experience the boldness of Vietnamese Robusta coffee, with its intense flavor and high caffeine content. Perfect for those who prefer a strong and invigorating brew.",
+    "quality": ["Pure Grade", "Intense Flavor", "Dark Roasting", "Fine Grinding"],
+    "discount_price": "",
+    "price": 16.99,
+    "star": 4,
+    "img": "assets/product-1.png"
+  },
+  {
+    "id": 7,
+    "name": "Tanzanian Peaberry",
+    "description": "Discover the uniqueness of Tanzanian Peaberry coffee, characterized by its small, round beans and bright, fruity notes. Sourced from the slopes of Mount Kilimanjaro.",
+    "quality": ["Pure Grade", "Fruity Notes", "Medium Roasting", "Fine Grinding"],
+    "discount_price": "",
+    "price": 23.99,
+    "star": 5,
+    "img": "assets/product-3.png"
+  },
+  {
+    "id": 8,
+    "name": "Nicaraguan Jinotega",
+    "description": "Savor the richness of Nicaraguan Jinotega coffee, grown in the fertile soils of Jinotega. Enjoy its smooth flavor with hints of cocoa and caramel, perfect for any coffee enthusiast.",
+    "quality": ["Pure Grade", "Smooth Flavor", "Medium Roasting", "Medium Grinding"],
+    "discount_price": 20.99,
+    "price": 25.99,
+    "star": 5,
+    "img": "assets/product-2.png"
+  },
+  {
+    "id": 9,
+    "name": "Ethiopian Yirgacheffe",
+    "description": "Experience the vibrant and floral notes of Ethiopian Yirgacheffe coffee, grown in the lush highlands of Ethiopia. This coffee offers a unique and aromatic taste experience.",
+    "quality": ["Pure Grade", "Floral Notes", "Light Roasting", "Medium Grinding"],
+    "discount_price": "",
+    "price": 21.99,
+    "star": 4,
+    "img": "assets/product-2.png"
+  },
+  {
+    "id": 10,
+    "name": "Panamanian Geisha",
+    "description": "Indulge in the luxury of Panamanian Geisha coffee, renowned for its exquisite flavor profile and floral aroma. Grown in the fertile soils of Panama, this coffee is a true gem.",
+    "quality": ["Pure Grade", "Exquisite Flavor", "Light Roasting", "Fine Grinding"],
+    "discount_price": "",
+    "price": 29.99,
+    "star": 5,
+    "img": "assets/product-1.png"
+  },
+  {
+    "id": 11,
+    "name": "Hawaiian Kona",
+    "description": "Treat yourself to the smoothness of Hawaiian Kona coffee, with its rich flavor and buttery texture. Grown in the volcanic soil of Hawaii's Big Island, this coffee is a true indulgence.",
+    "quality": ["Pure Grade", "Rich Flavor", "Medium Roasting", "Medium Grinding"],
+    "discount_price": "",
+    "price": 27.99,
+    "star": 5,
+    "img": "assets/product-1.png"
+  },
+  {
+    "id": 12,
+    "name": "Mexican Chiapas",
+    "description": "Enjoy the richness of Mexican Chiapas coffee, with its smooth flavor and chocolatey undertones. Sourced from the Chiapas region of Mexico, this coffee is sure to delight your senses.",
+    "quality": ["Pure Grade", "Smooth Flavor", "Medium Roasting", "Medium Grinding"],
+    "discount_price": 18.99,
+    "price": 22.99,
+    "star": 5,
+    "img": "assets/product-2.png"
+  },
+  {
+    "id": 13,
+    "name": "Indian Monsooned Malabar",
+    "description": "Experience the unique taste of Indian Monsooned Malabar coffee, with its low acidity and full-bodied flavor. Aged through monsooning process, this coffee offers a distinctive and memorable experience.",
+    "quality": ["Pure Grade", "Full-bodied Flavor", "Dark Roasting", "Coarse Grinding"],
+    "discount_price": "",
+    "price": 26.99,
+    "star": 4,
+    "img": "assets/product-3.png"
+  },
+  {
+    "id": 14,
+    "name": "Jamaican Blue Mountain",
+    "description": "Indulge in the luxury of Jamaican Blue Mountain coffee, with its smooth and mild flavor profile. Grown in the Blue Mountains of Jamaica, this coffee is revered for its exceptional quality.",
+    "quality": ["Pure Grade", "Mild Flavor", "Medium Roasting", "Medium Grinding"],
+    "discount_price": "",
+    "price": 32.99,
+    "star": 5,
+    "img": "assets/product-2.png"
+  },
+  {
+    "id": 15,
+    "name": "Rwandan Bourbon",
+    "description": "Savor the rich and complex flavors of Rwandan Bourbon coffee, known for its wine-like acidity and fruity notes. Grown in the fertile soils of Rwanda, this coffee is a true gem of East Africa.",
+    "quality": ["Pure Grade", "Complex Flavor", "Medium Roasting", "Medium Grinding"],
+    "discount_price": "",
+    "price": 17.99,
+    "star": 4,
+    "img": "assets/product-3.png"
+  },
+  {
+    "id": 16,
+    "name": "Yemeni Mocha",
+    "description": "Experience the exotic taste of Yemeni Mocha coffee, with its rich and spicy flavor profile. Grown in the mountains of Yemen, this coffee is a true representation of Arabian coffee culture.",
+    "quality": ["Pure Grade", "Spicy Flavor", "Dark Roasting", "Fine Grinding"],
+    "discount_price": 28.99,
+    "price": 34.99,
+    "star": 4,
+    "img": "assets/product-1.png"
+  }
+]

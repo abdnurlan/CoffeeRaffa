@@ -1,0 +1,131 @@
+.shop_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 100px;
+}
+
+.products_list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: space-around;
+}
+
+.product{
+    max-width: 23%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 50px;
+}
+
+.product_info{
+    display: flex;
+    flex-direction: column;
+}
+
+.product, .product_info{
+    gap: 10px;
+}
+
+.product img {
+    width: 100%;
+    background-color: #f3eee8;
+    padding: 50px 0px;
+}
+
+.stars {
+    font-size: 16px; 
+    color: #e2b239 !important;
+}
+  
+.stars span {
+    display: inline-block;
+}
+
+.product_prices{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+}
+
+.original_price{
+    color: #adadad !important;
+    font-size: 16px;
+    font-weight: 700;
+    position: relative;
+}
+
+.original_price::after{
+    position: absolute;
+    content: '';
+    background: #adadad;
+    width: 100%;
+    height: 2px;
+    left: 0%;
+    bottom: 45%;
+}
+
+.original_price_green{
+    color: #4d8b55;
+    font-size: 16px;
+    font-weight: 700;
+    position: relative;
+}
+
+.discount_price{
+    color: #D12323 !important;
+    font-size: 16px;
+    font-weight: 700;
+    position: relative;
+}
+
+.button {
+  border: 0px;
+  border-radius: 48px;
+  margin-top: 50px;
+  padding: 22px 30px;
+  width: 260px;
+  font-size: 14px;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  transition: .5s;
+  z-index: 1;
+  text-align: center;
+  background: #4d8b55;
+}
+
+.button:before {
+  content: '';
+  background: #151515;
+  position: absolute;
+  width: 100%;
+  top: 200px;
+  left: 0;
+  height: 100%;
+  transition: 0.3s linear;
+  z-index: -1;
+}
+
+.button:hover:before {
+  top: 0px;
+}
+
+@media screen and (max-width: 768px) {
+    .product{
+        max-width: 45%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .product{
+        max-width: 75%;
+    }
+}
