@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './CoffeeBean.module.css';
-import Coffee from '../../../public/assets/coffee-bean.png';
-import Smoke from '../../../public/assets/coffee-smoke.png'
+import Coffee from '/assets/coffee-bean.png';
+import Smoke from '/assets/coffee-smoke.png'
 
 const CoffeeBean = () => {
   return (

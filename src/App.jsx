@@ -7,6 +7,8 @@ import './App.css'
 import Beans from '/assets/coffee-beans.png'
 import Basket from "./components/Basket/Basket";
 import BasketNavbar from "./components/Basket/BasketNavbar";
+import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   const [showGoTopButton, setShowGoTopButton] = useState(false);
@@ -33,6 +35,7 @@ function App() {
 
   return (
     <>
+      <ToastContainer />
       {isHomePage ? <Navbar /> : <BasketNavbar />}
       <Routes>
         <Route path="/" element={<Home />} />
