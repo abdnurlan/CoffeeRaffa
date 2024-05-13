@@ -1,5 +1,5 @@
 .background {
-  background-image: url('../../../public/assets/header-coffee-bg.jpg');
+  background-image: url('/assets/header-coffee-bg.jpg');
   background-size: cover;
   background-position: center;
   height: 95vh;

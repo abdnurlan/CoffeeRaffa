@@ -53,7 +53,7 @@
     flex-direction: column;
     width: 45%;
     padding-top: 35px;
-    background: url('../../../public/assets/popular_product_bg.png');
+    background: url('/assets/popular_product_bg.png');
     gap: 20px;
 }
 

@@ -1,5 +1,5 @@
 .basket_navbar_bg{
-    background: url('../../../public/assets/basket_navbar_bg.jpg');
+    background: url('/assets/basket_navbar_bg.jpg');
     background-size: cover;
     height: 50vh;
 }
