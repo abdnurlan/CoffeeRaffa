@@ -1,18 +1,20 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import styles from './ProductShop.module.css';
 import Data from '../../data/data.json';
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../../features/cartSlice';
 
-
 const ProductShop = () => {
     const [displayCount, setDisplayCount] = useState(4);
     const [isLoading, setIsLoading] = useState(false);
-    const dispatch = useDispatch()
+    const [cartOpen, setCartOpen] = useState(false);
+    const dispatch = useDispatch();
 
     const handleAddToCart = (product) => {
-        dispatch(addToCart(product))
-    }
+        dispatch(addToCart(product));
+        setCartOpen(true);
+    };
 
     const renderStars = (rating) => {
         const totalStars = 5;
@@ -48,7 +50,15 @@ const ProductShop = () => {
                             <div className={styles.product_img_container}>
                                 <img src={product.img} alt={product.name} />
                                 <div className={styles.product_shadow}></div>
-                                <div className={styles.hover_btn} onClick={() => handleAddToCart(product)}>Add to Cart</div>
+                                {cartOpen ? (
+                                    <Link to="/basket" className={styles.hover_btn}>
+                                        View Cart
+                                    </Link>
+                                ) : (
+                                    <div className={styles.hover_btn} onClick={() => handleAddToCart(product)}>
+                                        Add to Cart
+                                    </div>
+                                )}
                             </div>
                             <div className={styles.product_info}>
                                 {renderStars(product.star)}
@@ -69,7 +79,15 @@ const ProductShop = () => {
                                         </div>
                                     )}
                                 </div>
-                                <div className={styles.hover_btn_mobile} onClick={() => handleAddToCart(product)}>Add to Cart</div>
+                                {cartOpen ? (
+                                    <Link to="/basket" className={styles.hover_btn_mobile}>
+                                        View Cart
+                                    </Link>
+                                ) : (
+                                    <div className={styles.hover_btn_mobile} onClick={() => handleAddToCart(product)}>
+                                        Add to Cart
+                                    </div>
+                                )}
                             </div>
                         </div>
                     ))}

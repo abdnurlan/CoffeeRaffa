@@ -6,16 +6,29 @@ import Logo_Light from '/assets/kaffa_logo_light.png';
 import { FaBagShopping, FaBars, FaInstagram, FaSearchengin, FaYoutube } from 'react-icons/fa6';
 import { FaTimes } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { getTotals } from '../../features/cartSlice';
 
 const Navbar = () => {
+  const { cartTotalQuantity } = useSelector(state => state.cart)
+  const cart = useSelector((state) => state.cart)
   const [clicked, setClicked] = useState(false);
+  const dispatch = useDispatch()
 
   useEffect(() => {
-    if (clicked) {
-      document.body.style.overflow = 'hidden';
-    } else {
+    dispatch(getTotals())
+  }, [cart])
+
+  useEffect(() => {
+    const handleBodyOverflow = () => {
+      document.body.style.overflow = clicked ? 'hidden' : 'auto';
+    };
+
+    handleBodyOverflow();
+
+    return () => {
       document.body.style.overflow = 'auto';
-    }
+    };
   }, [clicked]);
 
   const handleClick = () => {
@@ -50,7 +63,7 @@ const Navbar = () => {
             </div>
             <div className={styles.navbar_basket}>
               <div className={styles.product_counter}>
-                <span>1</span>
+                <span>{cartTotalQuantity}</span>
               </div>
               <Link to="/basket" onClick={closeMenu}>
                 <div className={styles.navbar_basket_icon}>
@@ -81,7 +94,7 @@ const Navbar = () => {
               </ul>
               <div className={styles.basket_mobile}>
                 <div className={styles.product_counter_mobile}>
-                  <span>1</span>
+                  <span>{cartTotalQuantity}</span>
                 </div>
                 <Link to="/basket" onClick={closeMenu}>
                   <div className={styles.basket_mobile_icon}>

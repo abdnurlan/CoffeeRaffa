@@ -236,6 +236,12 @@
     border-right: 0px !important;
     color: red;
     font-size: 1.5em;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.remove:hover{
+    color: #4d8b55;
 }
 
 .product_name {
@@ -260,6 +266,10 @@
 
 .product_price {
   width: 15%;
+}
+
+.quantity_buttons div{
+    cursor: pointer;
 }
 
 @media screen and (max-width: 768px) {
