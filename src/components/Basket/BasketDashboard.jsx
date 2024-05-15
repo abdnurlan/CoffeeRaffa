@@ -6,11 +6,11 @@ import { FaAngleDown, FaAngleUp } from 'react-icons/fa'
 import { CiCircleRemove } from 'react-icons/ci'
 import { addToCart, decreaseCart, removeFromCart } from '../../features/cartSlice'
 import { useEffect } from 'react'
-import { getTotals } from '../../features/cartSlice';
+import { getTotals } from '../../features/cartSlice'
 
 const BasketDashboard = () => {
   const cart = useSelector((state) => state.cart)
-  const {cartTotalAmount} = useSelector(state => state.cart)
+  const { cartTotalAmount } = useSelector((state) => state.cart)
   const dispatch = useDispatch()
 
   const handleRemoveFromCart = (cartItem) => {
@@ -29,6 +29,12 @@ const BasketDashboard = () => {
     dispatch(getTotals())
   }, [cart])
 
+  const generateWhatsAppMessage = () => {
+    const message = cart.cartItems.map(item => `${item.name}: ${item.cartQuantity}`).join('%0A');
+    const totalPrice = cartTotalAmount.toFixed(2);
+    const whatsappLink = `https://wa.me/+994554048181/?text=Order%20Details:%0A${message}%0ATotal%20Amount:%20${totalPrice}`;
+    window.open(whatsappLink, '_blank');
+  };
 
   return (
     <div className='container'>
@@ -43,40 +49,43 @@ const BasketDashboard = () => {
             </div>
           </div>
         ) : (
-          <table className={styles.product_table} border="0">
-            <thead>
-              <tr>
-                <th className={styles.gap}></th>
-                <th className={styles.gap}></th>
-                <th className={styles.product_price}>Product</th>
-                <th className={styles.product_name}>Price</th>
-                <th className={styles.product_quantity}>Quantity</th>
-                <th className={styles.product_price}>Subtotal</th>
-              </tr>
-            </thead>
-            <tbody>
-              {cart.cartItems?.map(cartItem => (
-                <tr key={cartItem.id}>
-                  <td className={styles.remove} onClick={() => handleRemoveFromCart(cartItem)}><CiCircleRemove /></td>
-                  <td className={styles.product_img}><img src={cartItem.img} alt={cartItem.name} /></td>
-                  <td className={styles.product_name}>{cartItem.name}</td>
-                  <td className={styles.product_price}>{cartItem.price}</td>
-                  <td className={styles.product_quantity}>
-                    <div className={styles.quantity_container}>
-                      <div className={styles.quantity_number}>{cartItem.cartQuantity}</div>
-                      <div className={styles.quantity_buttons}>
-                        <div onClick={() => handleIncreaseCart(cartItem)}><FaAngleUp /></div>
-                        <div onClick={() => handleDecreaseCart(cartItem)}><FaAngleDown /></div>
-                      </div>
-                    </div>
-                  </td>
-                  <td className={styles.product_price}>{(cartItem.price * cartItem.cartQuantity).toFixed(2)}</td>
+          <>
+            <table className={styles.product_table} border="0">
+              <thead>
+                <tr>
+                  <th className={styles.gap}></th>
+                  <th className={styles.gap}></th>
+                  <th className={styles.product_price}>Product</th>
+                  <th className={styles.product_name}>Price</th>
+                  <th className={styles.product_quantity}>Quantity</th>
+                  <th className={styles.product_price}>Subtotal</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                {cart.cartItems?.map(cartItem => (
+                  <tr key={cartItem.id}>
+                    <td className={styles.remove} onClick={() => handleRemoveFromCart(cartItem)}><CiCircleRemove /></td>
+                    <td className={styles.product_img}><img src={cartItem.img} alt={cartItem.name} /></td>
+                    <td className={styles.product_name}>{cartItem.name}</td>
+                    <td className={styles.product_price}>{cartItem.price}</td>
+                    <td className={styles.product_quantity}>
+                      <div className={styles.quantity_container}>
+                        <div className={styles.quantity_number}>{cartItem.cartQuantity}</div>
+                        <div className={styles.quantity_buttons}>
+                          <div onClick={() => handleIncreaseCart(cartItem)}><FaAngleUp /></div>
+                          <div onClick={() => handleDecreaseCart(cartItem)}><FaAngleDown /></div>
+                        </div>
+                      </div>
+                    </td>
+                    <td className={styles.product_price}>{(cartItem.price * cartItem.cartQuantity).toFixed(2)}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+            <h1>Total Amount : {cartTotalAmount.toFixed(2)}</h1>
+            <button onClick={generateWhatsAppMessage}>Let Order</button>
+          </>
         )}
-        <h1>Total Amount : {cartTotalAmount.toFixed(2)}</h1>
       </div>
     </div>
   )

@@ -9,10 +9,14 @@ const ProductShop = () => {
     const [displayCount, setDisplayCount] = useState(4);
     const [isLoading, setIsLoading] = useState(false);
     const [cartOpen, setCartOpen] = useState(false);
+    const [cartButtons, setCartButtons] = useState(Array(Data.length).fill(false));
     const dispatch = useDispatch();
 
-    const handleAddToCart = (product) => {
+    const handleAddToCart = (product, index) => {
         dispatch(addToCart(product));
+        const newCartButtons = [...cartButtons];
+        newCartButtons[index] = true; 
+        setCartButtons(newCartButtons);
         setCartOpen(true);
     };
 
@@ -45,17 +49,17 @@ const ProductShop = () => {
         <div className='container'>
             <div className={styles.shop_container}>
                 <div className={styles.products_list}>
-                    {Data.slice(0, displayCount).map(product => (
+                    {Data.slice(0, displayCount).map((product, index) => (
                         <div key={product.id} className={styles.product}>
                             <div className={styles.product_img_container}>
                                 <img src={product.img} alt={product.name} />
                                 <div className={styles.product_shadow}></div>
-                                {cartOpen ? (
+                                {cartButtons[index] ? ( 
                                     <Link to="/basket" className={styles.hover_btn}>
                                         View Cart
                                     </Link>
                                 ) : (
-                                    <div className={styles.hover_btn} onClick={() => handleAddToCart(product)}>
+                                    <div className={styles.hover_btn} onClick={() => handleAddToCart(product, index)}>
                                         Add to Cart
                                     </div>
                                 )}
@@ -79,12 +83,12 @@ const ProductShop = () => {
                                         </div>
                                     )}
                                 </div>
-                                {cartOpen ? (
+                                {cartButtons[index] ? (
                                     <Link to="/basket" className={styles.hover_btn_mobile}>
                                         View Cart
                                     </Link>
                                 ) : (
-                                    <div className={styles.hover_btn_mobile} onClick={() => handleAddToCart(product)}>
+                                    <div className={styles.hover_btn_mobile} onClick={() => handleAddToCart(product, index)}>
                                         Add to Cart
                                     </div>
                                 )}
