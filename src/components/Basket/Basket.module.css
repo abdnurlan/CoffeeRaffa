@@ -1,15 +1,15 @@
-.basket_navbar_bg{
+.basket_navbar_bg {
     background: url('/assets/basket_navbar_bg.jpg');
     background-size: cover;
     height: 50vh;
 }
 
-.black_bg{
-    background: rgba( 21, 21, 21, 0.5);
+.black_bg {
+    background: rgba(21, 21, 21, 0.5);
 }
 
-.dark_black_bg{
-    background: rgba( 21, 21, 21, 0.5);
+.dark_black_bg {
+    background: rgba(21, 21, 21, 0.5);
 }
 
 .navbar_logo img {
@@ -30,13 +30,13 @@
     position: relative;
 }
 
-.navbar_basket_icon{
+.navbar_basket_icon {
     border: 2px solid #4d8b55;
     border-radius: 50%;
     padding: 8px;
 }
 
-.product_counter{
+.product_counter {
     border-radius: 50%;
     background-color: white;
     display: flex;
@@ -46,7 +46,7 @@
     height: fit-content;
 }
 
-.product_counter span{
+.product_counter span {
     width: 24px;
     height: 24px;
     font-size: 0.8em;
@@ -59,16 +59,18 @@
     margin: auto;
 }
 
-.navbar_basket_icon svg, .search svg{
-    transition: .5s;
+.navbar_basket_icon svg,
+.search svg {
+    transition: 0.5s;
 }
 
-.navbar_basket_icon svg:hover, .search svg:hover{
+.navbar_basket_icon svg:hover,
+.search svg:hover {
     color: white;
     scale: 1.05;
 }
 
-.basket_navbar{
+.basket_navbar {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -76,7 +78,7 @@
     padding: 24px 45px;
 }
 
-.phone{
+.phone {
     display: flex;
     flex-direction: row;
     gap: 10px;
@@ -86,20 +88,20 @@
     padding-right: 40px;
 }
 
-.phone svg{
+.phone svg {
     color: #4d8b55;
 }
 
-.phone h4{
+.phone h4 {
     color: white;
-    transition: .5s;
+    transition: 0.5s;
 }
 
-.phone h4:hover{
+.phone h4:hover {
     color: #4d8b55;
 }
 
-.basket_header{
+.basket_header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -108,7 +110,7 @@
     position: relative;
 }
 
-.basket_span{
+.basket_span {
     transform: rotate(-90deg);
     font-size: 10px;
     font-weight: 900;
@@ -118,7 +120,7 @@
     left: 0%;
 }
 
-.basket_header_text{
+.basket_header_text {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -127,28 +129,28 @@
     margin: auto;
 }
 
-.basket_header_text h3{
+.basket_header_text h3 {
     color: white;
     font-size: 48px;
 }
 
-.basket_header_links{
+.basket_header_links {
     display: flex;
     flex-direction: row;
     gap: 20px;
     color: white;
 }
 
-.basket_header_links a{
+.basket_header_links a {
     color: #4d8b55;
-    transition: .5s;
+    transition: 0.5s;
 }
 
-.basket_header_links a:hover{
+.basket_header_links a:hover {
     color: white;
 }
 
-.basket_header_social{
+.basket_header_social {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -156,32 +158,32 @@
     right: 0%;
 }
 
-.basket_header_social svg{
+.basket_header_social svg {
     color: #4d8b55;
-    transition: .5s;
+    transition: 0.5s;
 }
 
-.basket_header_social svg:hover{
+.basket_header_social svg:hover {
     color: white;
     transform: scale(1.05);
 }
 
-.dashboard{
+.dashboard {
     padding: 120px 0px;
 }
 
-.empty_basket{
+.empty_basket {
     background-color: #f7f6f7;
     padding: 18px 30px;
     border-top: 2px solid #4d8b55;
     margin-bottom: 30px;
 }
 
-.empty_basket p{
+.empty_basket p {
     font-size: 12px;
 }
 
-.return_shop button{
+.return_shop button {
     border: 0px;
     border-radius: 48px;
     padding: 14px 30px;
@@ -193,66 +195,102 @@
     display: inline-block;
     overflow: hidden;
     position: relative;
-    transition: .5s;
+    transition: 0.5s;
     z-index: 1;
     text-align: center;
     background-color: #4d8b55;
 }
 
-.return_shop button:hover{
+.return_shop button:hover {
+    background-color: #151515;
+}
+
+.let_order {
+    display: flex;
+    justify-content: flex-end;
+    width: 95%;
+    margin-top: 25px;
+}
+
+.let_order button {
+    border: 0px;
+    border-radius: 48px;
+    padding: 14px 30px;
+    width: 180px;
+    font-size: 14px;
+    font-weight: 700;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    transition: 0.5s;
+    z-index: 1;
+    text-align: center;
+    background-color: #4d8b55;
+}
+
+.let_order button:hover {
     background-color: #151515;
 }
 
 .product_table {
-  width: 90%;
-  border-collapse: collapse;
-  margin: auto;
+    width: 90%;
+    border-collapse: collapse;
+    margin: auto;
 }
 
 .product_table th,
 .product_table td {
-  border: 1px solid #ddd;
-  padding: 8px;
-  text-align: center;
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
 }
 
 .product_table th {
-  background-color: #151515;
-  color: white;
-  border: 0px;
+    background-color: #151515;
+    color: white;
+    border: 0px;
 }
 
-.product_img img{
+.product_img img {
     width: 70px;
 }
 
-.product_img{
+.product_img {
     width: 5%;
     border-left: 0px !important;
 }
 
-.remove{
+.remove {
     width: 5%;
     border-right: 0px !important;
     color: red;
     font-size: 1.5em;
     cursor: pointer;
-    transition: .5s;
+    transition: 0.5s;
 }
 
-.remove:hover{
+.remove:hover {
     color: #4d8b55;
 }
 
 .product_name {
-  width: 25%;
+    width: 25%;
+    line-height: 1.5;
+    font-weight: 700;
+    font-size: 0.8em;
 }
 
 .product_quantity {
-  width: 10%;
+    width: 10%;
 }
 
-.quantity_container{
+.product_total_price thead tr th {
+    font-weight: 400;
+}
+
+.quantity_container {
     border: 1px solid rgba(0, 0, 0, 0.2);
     padding: 10px 20px;
     display: flex;
@@ -265,25 +303,158 @@
 }
 
 .product_price {
-  width: 15%;
+    width: 15%;
+    color: #4d8b55;
+    font-weight: 700;
 }
 
-.quantity_buttons div{
+.product_subtotal{
+    font-weight: 700;
+}
+
+
+.quantity_buttons div {
     cursor: pointer;
 }
 
+.product_total_price {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    margin: auto;
+    padding-top: 50px;
+    justify-content: flex-end;
+}
+
+.product_total_price th {
+    border: 1px solid #ddd;
+    padding: 20px;
+    justify-content: center;
+    width: 150px;
+    display: flex;
+}
+
+.non_table_container{
+    display: none;
+}
+
+.product_info_text{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    text-align: right;
+    padding-bottom: 40px;
+}
+
 @media screen and (max-width: 768px) {
-    .basket_span, .basket_header_social{
+
+    .basket_span,
+    .basket_header_social {
         display: none;
+    }
+
+    .product_table,
+    .product_total_price {
+        display: none;
+    }
+
+    .non_table_container {
+        display: block;
+    }
+
+    .cart_item {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+        background-color: #f7f6f7;
+        padding: 10px;
+        border: 1px solid #ddd;
+    }
+
+    .let_order{
+        width: 100%;
+    }
+
+    .product_img img {
+        width: 100%;
+        height: auto;
+    }
+
+    .product_info {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .product_info p {
+        margin: 0;
+    }
+
+    .product_quantity {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .product_quantity button {
+        border: 1px solid #ddd;
+        background-color: #fff;
+        padding: 5px;
+        cursor: pointer;
+    }
+
+    .quantity_container{
+        margin: 0px;
+    }
+
+    .product_subtotal {
+        font-weight: bold;
+    }
+
+    .remove_button {
+        align-self: flex-end;
+        color: red;
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 1.3em;
+    }
+
+    .total_price {
+        display: flex;
+        justify-content: flex-end;
+        font-size: 1.2em;
+        font-weight: bold;
+        margin-top: 20px;
+    }
+
+    .product_name{
+        width: auto;
+    }
+
+    .product_info_text p:nth-child(2){
+        font-weight: 700;
+    }
+
+    .total_price{
+        justify-content: center;
+        padding-top: 40px;
+    }
+
+    .let_order{
+        justify-content: center;
     }
 }
 
 @media screen and (max-width: 480px) {
-    .basket_navbar{
+    .basket_navbar {
         padding: 24px;
     }
 
-    .phone{
+    .phone {
         display: none;
     }
 }
