@@ -3,7 +3,7 @@ import styles from './Navbar.module.css';
 import Header from '../../components/Header/Header';
 import Logo from '/assets/kaffa_logo.png';
 import Logo_Light from '/assets/kaffa_logo_light.png';
-import { FaBagShopping, FaBars, FaInstagram, FaSearchengin, FaYoutube } from 'react-icons/fa6';
+import { FaBagShopping, FaBars, FaInstagram, FaYoutube } from 'react-icons/fa6';
 import { FaTimes } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
@@ -70,9 +70,6 @@ const Navbar = () => {
                   <FaBagShopping />
                 </div>
               </Link>
-              <div className={styles.search}>
-                <FaSearchengin />
-              </div>
               <div className={`${styles.hamburger}`} onClick={handleClick}>
                 {clicked ? '' : <FaBars className={styles.hamburger_icon} />}
               </div>
