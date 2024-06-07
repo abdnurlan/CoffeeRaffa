@@ -279,7 +279,6 @@
     width: 25%;
     line-height: 1.5;
     font-weight: 700;
-    font-size: 0.8em;
 }
 
 .product_quantity {
@@ -300,6 +299,21 @@
     margin: auto;
     align-items: center;
     border-radius: 15px;
+}
+
+.grammage_container{
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100px;
+    align-items: center;
+    border-radius: 15px;
+}
+
+.grammage_container div:first-child{
+    font-size: 0.9em;
 }
 
 .product_price {

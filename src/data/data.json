@@ -4,8 +4,11 @@
     "name": "Kenyan AA",
     "description": "Delight in the bold flavors of Kenyan AA coffee, with its rich aroma and robust taste. Sourced from the highlands of Kenya, this coffee offers a unique and satisfying experience.",
     "quality": ["Pure Grade", "Bold Flavor Profile", "Dark Roasting", "Fine Grinding"],
-    "discount_price": "",
-    "price": 22.99,
+    "prices": {
+      "0.125kg": 3,
+      "0.500kg": 5,
+      "1kg": 7
+    },
     "star": 4,
     "img": "assets/product-1.png"
   },
@@ -14,8 +17,11 @@
     "name": "Guatemalan Antigua",
     "description": "Experience the smoothness and complexity of Guatemalan Antigua coffee, known for its well-balanced flavor profile and hints of chocolate and citrus.",
     "quality": ["Pure Grade", "Complex Flavor", "Medium Roasting", "Medium Grinding"],
-    "discount_price": "",
-    "price": 18.99,
+    "prices": {
+      "0.125kg": 2.5,
+      "0.500kg": 8,
+      "1kg": 18
+    },
     "star": 5,
     "img": "assets/product-2.png"
   },
@@ -24,8 +30,11 @@
     "name": "Peruvian Organic",
     "description": "Indulge in the purity of Peruvian Organic coffee, grown in the lush valleys of the Andes. Enjoy its clean taste and floral undertones, while supporting sustainable farming practices.",
     "quality": ["Organic", "Clean Taste", "Light Roasting", "Coarse Grinding"],
-    "discount_price": "",
-    "price": 19.99,
+    "prices": {
+      "0.125kg": 4.5,
+      "0.500kg": 12,
+      "1kg": 20
+    },
     "star": 5,
     "img": "assets/product-3.png"
   },
@@ -34,8 +43,11 @@
     "name": "Indonesian Sumatra Mandheling",
     "description": "Embark on a journey of exotic flavors with Indonesian Sumatra Mandheling coffee, featuring earthy notes and a full-bodied texture. Sourced from the volcanic soils of Sumatra.",
     "quality": ["Pure Grade", "Exotic Flavor", "Dark Roasting", "Coarse Grinding"],
-    "discount_price": "",
-    "price": 24.99,
+    "prices": {
+      "0.125kg": 6,
+      "0.500kg": 15,
+      "1kg": 30
+    },
     "star": 4,
     "img": "assets/product-1.png"
   },
@@ -44,8 +56,11 @@
     "name": "Costa Rican Tarrazu",
     "description": "Revel in the smoothness of Costa Rican Tarrazu coffee, known for its bright acidity and clean finish. Grown in the renowned Tarrazu region, this coffee is a true delight.",
     "quality": ["Pure Grade", "Bright Acidity", "Medium Roasting", "Medium Grinding"],
-    "discount_price": "",
-    "price": 20.99,
+    "prices": {
+      "0.125kg": 4,
+      "0.500kg": 10,
+      "1kg": 18
+    },
     "star": 5,
     "img": "assets/product-1.png"
   },
@@ -54,8 +69,11 @@
     "name": "Vietnamese Robusta",
     "description": "Experience the boldness of Vietnamese Robusta coffee, with its intense flavor and high caffeine content. Perfect for those who prefer a strong and invigorating brew.",
     "quality": ["Pure Grade", "Intense Flavor", "Dark Roasting", "Fine Grinding"],
-    "discount_price": "",
-    "price": 16.99,
+    "prices": {
+      "0.125kg": 3.5,
+      "0.500kg": 7,
+      "1kg": 14
+    },
     "star": 4,
     "img": "assets/product-1.png"
   },
@@ -64,8 +82,11 @@
     "name": "Tanzanian Peaberry",
     "description": "Discover the uniqueness of Tanzanian Peaberry coffee, characterized by its small, round beans and bright, fruity notes. Sourced from the slopes of Mount Kilimanjaro.",
     "quality": ["Pure Grade", "Fruity Notes", "Medium Roasting", "Fine Grinding"],
-    "discount_price": "",
-    "price": 23.99,
+    "prices": {
+      "0.125kg": 5.5,
+      "0.500kg": 14,
+      "1kg": 24
+    },
     "star": 5,
     "img": "assets/product-3.png"
   },
@@ -74,8 +95,11 @@
     "name": "Nicaraguan Jinotega",
     "description": "Savor the richness of Nicaraguan Jinotega coffee, grown in the fertile soils of Jinotega. Enjoy its smooth flavor with hints of cocoa and caramel, perfect for any coffee enthusiast.",
     "quality": ["Pure Grade", "Smooth Flavor", "Medium Roasting", "Medium Grinding"],
-    "discount_price": 20.99,
-    "price": 25.99,
+    "prices": {
+      "0.125kg": 6,
+      "0.500kg": 16,
+      "1kg": 30
+    },
     "star": 5,
     "img": "assets/product-2.png"
   },
@@ -84,8 +108,11 @@
     "name": "Ethiopian Yirgacheffe",
     "description": "Experience the vibrant and floral notes of Ethiopian Yirgacheffe coffee, grown in the lush highlands of Ethiopia. This coffee offers a unique and aromatic taste experience.",
     "quality": ["Pure Grade", "Floral Notes", "Light Roasting", "Medium Grinding"],
-    "discount_price": "",
-    "price": 21.99,
+    "prices": {
+      "0.125kg": 4.5,
+      "0.500kg": 11,
+      "1kg": 20
+    },
     "star": 4,
     "img": "assets/product-2.png"
   },
@@ -94,8 +121,11 @@
     "name": "Panamanian Geisha",
     "description": "Indulge in the luxury of Panamanian Geisha coffee, renowned for its exquisite flavor profile and floral aroma. Grown in the fertile soils of Panama, this coffee is a true gem.",
     "quality": ["Pure Grade", "Exquisite Flavor", "Light Roasting", "Fine Grinding"],
-    "discount_price": "",
-    "price": 29.99,
+    "prices": {
+      "0.125kg": 7,
+      "0.500kg": 20,
+      "1kg": 35
+    },
     "star": 5,
     "img": "assets/product-1.png"
   },
@@ -104,59 +134,90 @@
     "name": "Hawaiian Kona",
     "description": "Treat yourself to the smoothness of Hawaiian Kona coffee, with its rich flavor and buttery texture. Grown in the volcanic soil of Hawaii's Big Island, this coffee is a true indulgence.",
     "quality": ["Pure Grade", "Rich Flavor", "Medium Roasting", "Medium Grinding"],
-    "discount_price": "",
-    "price": 27.99,
+    "prices": {
+      "0.125kg": 6.5,
+      "0.500kg": 18,
+      "1kg": 32
+    },
     "star": 5,
     "img": "assets/product-1.png"
   },
   {
     "id": 12,
-    "name": "Mexican Chiapas",
-    "description": "Enjoy the richness of Mexican Chiapas coffee, with its smooth flavor and chocolatey undertones. Sourced from the Chiapas region of Mexico, this coffee is sure to delight your senses.",
-    "quality": ["Pure Grade", "Smooth Flavor", "Medium Roasting", "Medium Grinding"],
-    "discount_price": 18.99,
-    "price": 22.99,
+    "name": "Guatemalan Antigua",
+    "description": "Experience the smoothness and complexity of Guatemalan Antigua coffee, known for its well-balanced flavor profile and hints of chocolate and citrus.",
+    "quality": ["Pure Grade", "Complex Flavor", "Medium Roasting", "Medium Grinding"],
+    "prices": {
+      "0.125kg": 2.5,
+      "0.500kg": 8,
+      "1kg": 18
+    },
     "star": 5,
     "img": "assets/product-2.png"
   },
   {
     "id": 13,
-    "name": "Indian Monsooned Malabar",
-    "description": "Experience the unique taste of Indian Monsooned Malabar coffee, with its low acidity and full-bodied flavor. Aged through monsooning process, this coffee offers a distinctive and memorable experience.",
-    "quality": ["Pure Grade", "Full-bodied Flavor", "Dark Roasting", "Coarse Grinding"],
-    "discount_price": "",
-    "price": 26.99,
-    "star": 4,
+    "name": "Peruvian Organic",
+    "description": "Indulge in the purity of Peruvian Organic coffee, grown in the lush valleys of the Andes. Enjoy its clean taste and floral undertones, while supporting sustainable farming practices.",
+    "quality": ["Organic", "Clean Taste", "Light Roasting", "Coarse Grinding"],
+    "prices": {
+      "0.125kg": 4.5,
+      "0.500kg": 12,
+      "1kg": 20
+    },
+    "star": 14,
     "img": "assets/product-3.png"
-  },
-  {
-    "id": 14,
-    "name": "Jamaican Blue Mountain",
-    "description": "Indulge in the luxury of Jamaican Blue Mountain coffee, with its smooth and mild flavor profile. Grown in the Blue Mountains of Jamaica, this coffee is revered for its exceptional quality.",
-    "quality": ["Pure Grade", "Mild Flavor", "Medium Roasting", "Medium Grinding"],
-    "discount_price": "",
-    "price": 32.99,
-    "star": 5,
-    "img": "assets/product-2.png"
   },
   {
     "id": 15,
-    "name": "Rwandan Bourbon",
-    "description": "Savor the rich and complex flavors of Rwandan Bourbon coffee, known for its wine-like acidity and fruity notes. Grown in the fertile soils of Rwanda, this coffee is a true gem of East Africa.",
-    "quality": ["Pure Grade", "Complex Flavor", "Medium Roasting", "Medium Grinding"],
-    "discount_price": "",
-    "price": 17.99,
+    "name": "Indonesian Sumatra Mandheling",
+    "description": "Embark on a journey of exotic flavors with Indonesian Sumatra Mandheling coffee, featuring earthy notes and a full-bodied texture. Sourced from the volcanic soils of Sumatra.",
+    "quality": ["Pure Grade", "Exotic Flavor", "Dark Roasting", "Coarse Grinding"],
+    "prices": {
+      "0.125kg": 6,
+      "0.500kg": 15,
+      "1kg": 30
+    },
     "star": 4,
-    "img": "assets/product-3.png"
+    "img": "assets/product-1.png"
   },
   {
     "id": 16,
-    "name": "Yemeni Mocha",
-    "description": "Experience the exotic taste of Yemeni Mocha coffee, with its rich and spicy flavor profile. Grown in the mountains of Yemen, this coffee is a true representation of Arabian coffee culture.",
-    "quality": ["Pure Grade", "Spicy Flavor", "Dark Roasting", "Fine Grinding"],
-    "discount_price": 28.99,
-    "price": 34.99,
+    "name": "Costa Rican Tarrazu",
+    "description": "Revel in the smoothness of Costa Rican Tarrazu coffee, known for its bright acidity and clean finish. Grown in the renowned Tarrazu region, this coffee is a true delight.",
+    "quality": ["Pure Grade", "Bright Acidity", "Medium Roasting", "Medium Grinding"],
+    "prices": {
+      "0.125kg": 4,
+      "0.500kg": 10,
+      "1kg": 18
+    },
+    "star": 5,
+    "img": "assets/product-1.png"
+  },
+  {
+    "id": 17,
+    "name": "Vietnamese Robusta",
+    "description": "Experience the boldness of Vietnamese Robusta coffee, with its intense flavor and high caffeine content. Perfect for those who prefer a strong and invigorating brew.",
+    "quality": ["Pure Grade", "Intense Flavor", "Dark Roasting", "Fine Grinding"],
+    "prices": {
+      "0.125kg": 3.5,
+      "0.500kg": 7,
+      "1kg": 14
+    },
     "star": 4,
     "img": "assets/product-1.png"
+  },
+  {
+    "id": 18,
+    "name": "Tanzanian Peaberry",
+    "description": "Discover the uniqueness of Tanzanian Peaberry coffee, characterized by its small, round beans and bright, fruity notes. Sourced from the slopes of Mount Kilimanjaro.",
+    "quality": ["Pure Grade", "Fruity Notes", "Medium Roasting", "Fine Grinding"],
+    "prices": {
+      "0.125kg": 5.5,
+      "0.500kg": 14,
+      "1kg": 24
+    },
+    "star": 5,
+    "img": "assets/product-3.png"
   }
-]
+]   

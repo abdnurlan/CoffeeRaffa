@@ -1,10 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import styles from './PopularProduct.module.css';
 import Data from '../../data/data.json';
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../../features/cartSlice';
+import { Link } from 'react-router-dom';
 
 const PopularProduct = () => {
   const [currentProductIndex, setCurrentProductIndex] = useState(0);
   const [isChangingProduct, setIsChangingProduct] = useState(false);
+  const [addedToCart, setAddedToCart] = useState(Array(Data.length).fill(false));
+  const dispatch = useDispatch();
 
   const fiveStarProducts = Data.filter(product => product.star === 5);
 
@@ -21,6 +26,15 @@ const PopularProduct = () => {
 
     return () => clearInterval(interval);
   }, []);
+
+  const handleAddToCart = () => {
+    dispatch(addToCart(fiveStarProducts[currentProductIndex]));
+    setAddedToCart(prevState => {
+      const newState = [...prevState];
+      newState[currentProductIndex] = true;
+      return newState;
+    });
+  };
 
   const renderStars = (rating) => {
     const totalStars = 5;
@@ -100,12 +114,16 @@ const PopularProduct = () => {
                 </>
               ) : (
                 <div className={styles.original_price_green}>
-                  <span>${currentProduct.price}</span>
+                  <span>${currentProduct.prices["0.500kg"]}</span>
                 </div>
               )}
             </div>
             <div className={styles.buttons}>
-              <div className={`${styles.button}`}>Add to cart</div>
+              {addedToCart[currentProductIndex] ? (
+                <Link className={`${styles.button} ${styles.cart_clicked}`} to={"/basket"}>View Cart</Link>
+              ) : (
+                <div className={`${styles.button}`} onClick={handleAddToCart}>Add to cart</div>
+              )}
             </div>
           </div>
         </div>

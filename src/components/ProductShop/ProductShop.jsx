@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './ProductShop.module.css';
 import Data from '../../data/data.json';
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../../features/cartSlice';
+import {API_data} from '../../data/data.jsx'
 
 const ProductShop = () => {
     const [displayCount, setDisplayCount] = useState(4);
@@ -11,6 +12,21 @@ const ProductShop = () => {
     const [cartOpen, setCartOpen] = useState(false);
     const [cartButtons, setCartButtons] = useState(Array(Data.length).fill(false));
     const dispatch = useDispatch();
+
+    const [data, setData] = useState([]);
+    const [error, setError] = useState(null);
+
+    useEffect(() => {
+        const getData = async () => {
+          try {
+            const fetchedData = await API_data();
+            setData(fetchedData);
+          } catch (error) {
+            setError(error);
+          }
+        };
+        getData();
+    }, []);
 
     const handleAddToCart = (product, index) => {
         dispatch(addToCart(product));
@@ -47,6 +63,17 @@ const ProductShop = () => {
 
     return (
         <div className='container'>
+            <div>
+                <h1>Data from API</h1>
+                <ul>
+                    {data.map((item) => (
+                        <div key={item.id}>
+                            <li>{item.name}</li>
+                            <img src={item.image} alt="tapa bilmedim" />
+                        </div>
+                    ))}
+                </ul>
+            </div>
             <div className={styles.shop_container}>
                 <div className={styles.products_list}>
                     {Data.slice(0, displayCount).map((product, index) => (
@@ -79,7 +106,7 @@ const ProductShop = () => {
                                         </>
                                     ) : (
                                         <div className={styles.original_price_green}>
-                                            <span>{`$${product.price}`}</span>
+                                            <span>{`$${product.prices["0.500kg"]}`}</span>
                                         </div>
                                     )}
                                 </div>
