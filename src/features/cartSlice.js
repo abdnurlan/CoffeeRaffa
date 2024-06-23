@@ -16,7 +16,7 @@ const cartSlice = createSlice({
 
       if (itemIndex >= 0) {
         state.cartItems[itemIndex].cartQuantity += 1;
-        toast.info("Increased product quantity", {
+        toast.info("Artan məhsul miqdarı", {
           position: "top-right",
         });
       } else {
@@ -28,7 +28,7 @@ const cartSlice = createSlice({
           price: action.payload.prices[defaultGrammage], 
         };
         state.cartItems.push(tempProduct);
-        toast.success("Added a new product to cart", {
+        toast.success("Səbətə yeni məhsul əlavə edildi", {
           position: "top-right",
         });
       }
@@ -43,7 +43,7 @@ const cartSlice = createSlice({
       state.cartItems = nextCartItems;
       localStorage.setItem("cartItems", JSON.stringify(state.cartItems));
 
-      toast.error("Removed from cart", {
+      toast.error("Səbətdən çıxarıldı", {
         position: "top-right",
       });
     },
@@ -55,7 +55,7 @@ const cartSlice = createSlice({
       if (state.cartItems[itemIndex].cartQuantity > 1) {
         state.cartItems[itemIndex].cartQuantity -= 1;
 
-        toast.info("Decreased product quantity", {
+        toast.info("Məhsulun miqdarının azalması", {
           position: "top-right",
         });
       } else if (state.cartItems[itemIndex].cartQuantity === 1) {
@@ -65,7 +65,7 @@ const cartSlice = createSlice({
 
         state.cartItems = nextCartItems;
 
-        toast.error("Removed from cart", {
+        toast.error("Səbətdən çıxarıldı", {
           position: "top-right",
         });
       }
