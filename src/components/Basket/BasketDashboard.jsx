@@ -46,8 +46,8 @@ const BasketDashboard = () => {
   }, [cart, dispatch]);
 
   const generateWhatsAppMessage = () => {
-    const message = cart.cartItems.map(item => `${item.name}: \t${item.cartQuantity} × ${item.grammage} = $${(item.price * item.cartQuantity).toFixed(2)}`).join('%0A%0A');
-    const totalPrice = `Total Amount: $${cartTotalAmount.toFixed(2)}`;
+    const message = cart.cartItems.map(item => `${item.name}: \t${item.cartQuantity} × ${item.grammage} = ${(item.price * item.cartQuantity).toFixed(2)} ₼`).join('%0A%0A');
+    const totalPrice = `Total Amount: ${cartTotalAmount.toFixed(2)} ₼`;
     const whatsappLink = `https://wa.me/+994554048181/?text=Order%20Details:%0A%0A${message}%0A%0A${totalPrice}`;
     window.open(whatsappLink, '_blank');
   };
@@ -85,7 +85,7 @@ const BasketDashboard = () => {
                       <td className={styles.remove} onClick={() => handleRemoveFromCart(cartItem)}><CiCircleRemove /></td>
                       <td className={styles.product_img}><img src={cartItem.img} alt={cartItem.name} /></td>
                       <td className={styles.product_name}>{cartItem.name}</td>
-                      <td className={styles.product_price}>${cartItem.price}</td>
+                      <td className={styles.product_price}>{cartItem.price} ₼</td>
                       <td className={styles.product_quantity}>
                         <div className={styles.quantity_container}>
                           <div className={styles.quantity_number}>{cartItem.cartQuantity}</div>
@@ -104,7 +104,7 @@ const BasketDashboard = () => {
                           </div>
                         </div>
                       </td>
-                      <td className={styles.product_subtotal}>${(cartItem.price * cartItem.cartQuantity).toFixed(2)}</td>
+                      <td className={styles.product_subtotal}>{(cartItem.price * cartItem.cartQuantity).toFixed(2)} ₼</td>
                     </tr>
                   ))}
                 </tbody>
@@ -117,7 +117,7 @@ const BasketDashboard = () => {
                 </thead>
                 <tbody>
                   <tr>
-                    <td><th>${cartTotalAmount.toFixed(2)}</th></td>
+                    <th>{cartTotalAmount.toFixed(2)} ₼</th>
                   </tr>
                 </tbody>
               </table>
@@ -133,7 +133,7 @@ const BasketDashboard = () => {
                     </div>
                     <div className={styles.product_info_text}>
                       <p>Price:</p>
-                      <p className={styles.product_price}>${cartItem.price}</p>
+                      <p className={styles.product_price}>{cartItem.price} ₼</p>
                     </div>
                     <div className={styles.product_info_text}>
                       <p>Quantity:</p>
@@ -157,13 +157,13 @@ const BasketDashboard = () => {
                     </div>
                     <div className={styles.product_info_text}>
                       <p>Subtotal:</p>
-                      <p className={styles.product_subtotal}>${(cartItem.price * cartItem.cartQuantity).toFixed(2)}</p>
+                      <p className={styles.product_subtotal}>{(cartItem.price * cartItem.cartQuantity).toFixed(2)} ₼</p>
                     </div>
                   </div>
                 </div>
               ))}
               <div className={styles.total_price}>
-                <p>Total Price: ${cartTotalAmount.toFixed(2)}</p>
+                <p>Total Price: {cartTotalAmount.toFixed(2)} ₼</p>
               </div>
             </div>
             <div className={styles.let_order}>

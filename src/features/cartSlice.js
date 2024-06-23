@@ -20,12 +20,12 @@ const cartSlice = createSlice({
           position: "top-right",
         });
       } else {
-        const defaultGrammage = "0.500kg"; // Set your default grammage here
+        const defaultGrammage = "0.125kg";
         const tempProduct = {
           ...action.payload,
           cartQuantity: 1,
           grammage: defaultGrammage,
-          price: action.payload.prices[defaultGrammage], // Ensure prices is defined in payload
+          price: action.payload.prices[defaultGrammage], 
         };
         state.cartItems.push(tempProduct);
         toast.success("Added a new product to cart", {

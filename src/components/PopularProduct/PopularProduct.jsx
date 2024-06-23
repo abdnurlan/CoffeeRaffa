@@ -1,17 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import styles from './PopularProduct.module.css';
-import Data from '../../data/data.json';
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../../features/cartSlice';
 import { Link } from 'react-router-dom';
+import {API_data} from '../../data/data.jsx'
 
 const PopularProduct = () => {
   const [currentProductIndex, setCurrentProductIndex] = useState(0);
   const [isChangingProduct, setIsChangingProduct] = useState(false);
-  const [addedToCart, setAddedToCart] = useState(Array(Data.length).fill(false));
+  const [data, setData] = useState([]);
+  const [addedToCart, setAddedToCart] = useState(Array(data.length).fill(false));
   const dispatch = useDispatch();
 
-  const fiveStarProducts = Data.filter(product => product.star === 5);
+  const fiveStarProducts = data.filter(product => product.star === 5);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -20,11 +21,23 @@ const PopularProduct = () => {
         setCurrentProductIndex(prevIndex =>
           prevIndex === fiveStarProducts.length - 1 ? 0 : prevIndex + 1
         );
-        setIsChangingProduct(false); 
+        setIsChangingProduct(false);
       }, 500);
     }, 5000);
 
     return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    const getData = async () => {
+      try {
+        const fetchedData = await API_data();
+        setData(fetchedData);
+      } catch (error) {
+        setError(error);
+      }
+    };
+    getData();
   }, []);
 
   const handleAddToCart = () => {
@@ -114,7 +127,7 @@ const PopularProduct = () => {
                 </>
               ) : (
                 <div className={styles.original_price_green}>
-                  <span>${currentProduct.prices["0.500kg"]}</span>
+                  <span>{currentProduct.prices["0.125kg"]} ₼</span>
                 </div>
               )}
             </div>
