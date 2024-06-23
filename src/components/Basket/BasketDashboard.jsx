@@ -47,8 +47,8 @@ const BasketDashboard = () => {
 
   const generateWhatsAppMessage = () => {
     const message = cart.cartItems.map(item => `${item.name}: \t${item.cartQuantity} × ${item.grammage} = ${(item.price * item.cartQuantity).toFixed(2)} ₼`).join('%0A%0A');
-    const totalPrice = `Total Amount: ${cartTotalAmount.toFixed(2)} ₼`;
-    const whatsappLink = `https://wa.me/+994554048181/?text=Order%20Details:%0A%0A${message}%0A%0A${totalPrice}`;
+    const totalPrice = `Ümumi qiymət : ${cartTotalAmount.toFixed(2)} ₼`;
+    const whatsappLink = `https://wa.me/+994508882060/?text=Sifariş%20Detalları:%0A%0A${message}%0A%0A${totalPrice}`;
     window.open(whatsappLink, '_blank');
   };
 
@@ -58,10 +58,10 @@ const BasketDashboard = () => {
         {cart.cartItems.length === 0 ? (
           <div>
             <div className={styles.empty_basket}>
-              <p>Your cart currently empty</p>
+              <p>Səbətiniz boşdur.</p>
             </div>
             <div className={styles.return_shop}>
-              <Link to='/'><button>Return to shop</button></Link>
+              <Link to='/'><button>Geri dön</button></Link>
             </div>
           </div>
         ) : (
@@ -72,11 +72,11 @@ const BasketDashboard = () => {
                   <tr>
                     <th className={styles.gap}></th>
                     <th className={styles.gap}></th>
-                    <th className={styles.product_price}>Product</th>
-                    <th className={styles.product_name}>Price</th>
-                    <th className={styles.product_quantity}>Quantity</th>
-                    <th className={styles.product_price}>Grammage</th>
-                    <th className={styles.product_price}>Subtotal</th>
+                    <th className={styles.product_price}>Məhsul</th>
+                    <th className={styles.product_name}>Qiymət</th>
+                    <th className={styles.product_quantity}>Say</th>
+                    <th className={styles.product_price}>Ölçü</th>
+                    <th className={styles.product_price}>Cəm</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -112,7 +112,7 @@ const BasketDashboard = () => {
               <table className={styles.product_total_price}>
                 <thead>
                   <tr>
-                    <th>Total Price</th>
+                    <th>Ümumi qiymət</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -128,15 +128,15 @@ const BasketDashboard = () => {
                   <button onClick={() => handleRemoveFromCart(cartItem)} className={styles.remove_button}><CiCircleRemove /></button>
                   <div className={styles.product_info}>
                     <div className={styles.product_info_text}>
-                      <p>Product:</p>
+                      <p>Məhsul :</p>
                       <p className={styles.product_name}>{cartItem.name}</p>
                     </div>
                     <div className={styles.product_info_text}>
-                      <p>Price:</p>
+                      <p>Qiymət :</p>
                       <p className={styles.product_price}>{cartItem.price} ₼</p>
                     </div>
                     <div className={styles.product_info_text}>
-                      <p>Quantity:</p>
+                      <p>Say :</p>
                       <div className={styles.quantity_container}>
                         <div className={styles.quantity_number}>{cartItem.cartQuantity}</div>
                         <div className={styles.quantity_buttons}>
@@ -146,7 +146,7 @@ const BasketDashboard = () => {
                       </div>
                     </div>
                     <div className={styles.product_info_text}>
-                      <p>Grammage:</p>
+                      <p>Ölçü :</p>
                       <div className={styles.grammage_container}>
                         <div className={styles.quantity_number}>{cartItem.grammage}</div>
                         <div className={styles.quantity_buttons}>
@@ -156,18 +156,18 @@ const BasketDashboard = () => {
                       </div>
                     </div>
                     <div className={styles.product_info_text}>
-                      <p>Subtotal:</p>
+                      <p>Cəm :</p>
                       <p className={styles.product_subtotal}>{(cartItem.price * cartItem.cartQuantity).toFixed(2)} ₼</p>
                     </div>
                   </div>
                 </div>
               ))}
               <div className={styles.total_price}>
-                <p>Total Price: {cartTotalAmount.toFixed(2)} ₼</p>
+                <p>Ümumi qiymət : {cartTotalAmount.toFixed(2)} ₼</p>
               </div>
             </div>
             <div className={styles.let_order}>
-              <button onClick={generateWhatsAppMessage}>Let Order</button>
+              <button onClick={generateWhatsAppMessage}>Sifariş et</button>
             </div>
           </>
         )}
