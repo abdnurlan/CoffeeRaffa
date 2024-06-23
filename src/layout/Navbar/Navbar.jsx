@@ -52,7 +52,7 @@ const Navbar = () => {
                   <FaInstagram />
                 </div>
               </a>
-              <a href="" onClick={closeMenu}>
+              <a href="https://www.youtube.com/@elnurtarverdiyev3941" target="_blank" onClick={closeMenu}>
                 <div className={styles.navbar_media}>
                   <FaYoutube />
                 </div>
