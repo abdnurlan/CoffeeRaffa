@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import styles from './WatchVideo.module.css';
-import { MdPlayCircleOutline } from 'react-icons/md';
+import React, { useState } from "react";
+import styles from "./WatchVideo.module.css";
+import { MdPlayCircleOutline } from "react-icons/md";
 
 const WatchVideo = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -16,10 +16,10 @@ const WatchVideo = () => {
   return (
     <div className={styles.bg}>
       <div className={styles.black_bg}>
-        <div className='container'>
+        <div className="container">
           <div className={styles.video_container}>
-            <h2>How we Prepare our Beans</h2>
-            <h2>Watch Video</h2>
+            <h2>Kofelərimizi necə hazırlayırıq?</h2>
+            <h2>Videonu İzlə</h2>
             <div className={styles.play_button} onClick={handleModalOpen}>
               <MdPlayCircleOutline />
             </div>
@@ -31,13 +31,13 @@ const WatchVideo = () => {
                   </span>
                   <div className={styles.video_wrapper}>
                     <iframe
-                      className={styles.video}
-                      src="https://www.youtube.com/embed/q6kO-d6fYHo?si=k4xaSGPl7DkMDsbL"
+                    className={styles.video}
+                      src="https://www.youtube.com/embed/bMKNNf5vBMg?si=pUZlcjR_b6d0BepD"
                       title="YouTube video player"
-                      frameBorder="0"
+                      frameborder="0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      referrerPolicy="strict-origin-when-cross-origin"
-                      allowFullScreen
+                      referrerpolicy="strict-origin-when-cross-origin"
+                      allowfullscreen
                     ></iframe>
                   </div>
                 </div>

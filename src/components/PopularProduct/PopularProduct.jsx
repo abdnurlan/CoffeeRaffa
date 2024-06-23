@@ -81,7 +81,7 @@ const PopularProduct = () => {
   );
 
   if (fiveStarProducts.length === 0) {
-    return <div>No products with 5 stars found.</div>;
+    return <div>5 Ulduzlu Məhsul Yoxdur</div>;
   }
 
   const currentProduct = fiveStarProducts[currentProductIndex];
@@ -91,13 +91,10 @@ const PopularProduct = () => {
       <div className={styles.popular_product_container}>
         <div className={styles.header}>
           <div className={styles.header_h6}>
-            <h6>Online Store</h6>
+            <h6>Onlayn Mağaza</h6>
           </div>
           <div className={styles.header_h3}>
-            <h3>Popular Product</h3>
-          </div>
-          <div className={styles.header_text}>
-            <p>Maecenas dapibus mattis eros, at fermentum sapien malesuada sit amet. Quisque in sollicitudin eros. Aliquam eget sapien sed orci accumsan interdum at ac mi.</p>
+            <h3>Seçilmiş Məhsullar</h3>
           </div>
         </div>
         <div className={`${styles.popular_product_details} ${isChangingProduct ? styles.product_container_transition : ''}`}>
@@ -133,9 +130,9 @@ const PopularProduct = () => {
             </div>
             <div className={styles.buttons}>
               {addedToCart[currentProductIndex] ? (
-                <Link className={`${styles.button} ${styles.cart_clicked}`} to={"/basket"}>View Cart</Link>
+                <Link className={`${styles.button} ${styles.cart_clicked}`} to={"/basket"}>Səbətə bax</Link>
               ) : (
-                <div className={`${styles.button}`} onClick={handleAddToCart}>Add to cart</div>
+                <div className={`${styles.button}`} onClick={handleAddToCart}>Səbətə əlavə et</div>
               )}
             </div>
           </div>

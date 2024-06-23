@@ -39,6 +39,9 @@
     cursor: pointer;
 }
 
+.social_icons a{
+    color: #4d8b55;
+}
 .social_icons svg{
     transition: .5s;
 }

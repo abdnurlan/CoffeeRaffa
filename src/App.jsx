@@ -47,7 +47,7 @@ function App() {
       {showGoTopButton && (
         <button className="go-top-button" onClick={goToTop}>
           <img src={Beans} alt="bean" />
-          GO TOP
+          YUXARI
         </button>
       )}
     </>

@@ -10,7 +10,7 @@
 .statistics{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 130px 0px;
     gap: 30px;
 }

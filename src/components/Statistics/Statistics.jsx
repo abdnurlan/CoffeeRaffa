@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import styles from './Statistics.module.css';
 
 const Statistics = () => {
-  const targets = [37, 259, 140, 75];
+  const targets = [9, 12, 15];
   const duration = 1500;
 
   const [isVisible, setIsVisible] = useState(false);
@@ -47,10 +47,9 @@ const Statistics = () => {
   };
 
   const statisticNames = [
-    'Selected Varieties',
-    'Hectares of Plantations',
-    'Coffee Pickers',
-    'Consumer Countries'
+    'Seçilmiş Çeşidlər',
+    "Hektarlarla plantasiyalar",
+    "İstehsalçı ölkələr"
   ];
 
   return (
