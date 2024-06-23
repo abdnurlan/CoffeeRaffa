@@ -9,6 +9,7 @@ import Basket from "./components/Basket/Basket";
 import BasketNavbar from "./components/Basket/BasketNavbar";
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import Error from "./components/Error/Error";
 
 function App() {
   const [showGoTopButton, setShowGoTopButton] = useState(false);
@@ -40,6 +41,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/basket" element={<Basket />} />
+        <Route path="*" element={<Error />}/>
       </Routes>
       <Footer />
       {showGoTopButton && (

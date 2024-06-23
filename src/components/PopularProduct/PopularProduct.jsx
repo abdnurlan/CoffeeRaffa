@@ -102,7 +102,7 @@ const PopularProduct = () => {
         </div>
         <div className={`${styles.popular_product_details} ${isChangingProduct ? styles.product_container_transition : ''}`}>
           <div className={styles.popular_product_image}>
-            <img src={currentProduct.img} alt="" />
+            <img src={currentProduct.img} alt="image" />
           </div>
           <div className={styles.popular_product_info}>
             {renderStars(currentProduct.star)}
