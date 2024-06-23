@@ -1,12 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styles from './Basket.module.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { FaAngleDown, FaAngleUp } from 'react-icons/fa';
 import { CiCircleRemove } from 'react-icons/ci';
-import { addToCart, decreaseCart, removeFromCart, changeGrammage } from '../../features/cartSlice';
-import { useEffect } from 'react';
-import { getTotals } from '../../features/cartSlice';
+import { addToCart, decreaseCart, removeFromCart, changeGrammage, getTotals, resetCart } from '../../features/cartSlice';
 
 const grammages = ["0.125kg", "0.500kg", "1kg"];
 
@@ -50,6 +48,8 @@ const BasketDashboard = () => {
     const totalPrice = `Ümumi qiymət : ${cartTotalAmount.toFixed(2)} ₼`;
     const whatsappLink = `https://wa.me/+994508882060/?text=Sifariş%20Detalları:%0A%0A${message}%0A%0A${totalPrice}`;
     window.open(whatsappLink, '_blank');
+
+    dispatch(resetCart());
   };
 
   return (

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styles from "./Footer.module.css";
 import Logo from "/assets/kaffa_logo.png";
 import { FaInstagram, FaLocationDot, FaPhoneVolume, FaYoutube } from "react-icons/fa6";
@@ -9,14 +10,16 @@ const Footer = () => {
       <div className="container">
         <div className={styles.footer_section}>
           <div className={styles.footer_social}>
-            <div className={styles.footer_img}>
-              <img src={Logo} alt="logo" />
-            </div>
+            <Link to="/">
+              <div className={styles.footer_img}>
+                <img src={Logo} alt="logo" />
+              </div>
+            </Link>
             <div className={styles.footer_text}>
               <p>
                 {" "}
                 Siz də yeni qovrulmuş qəhvəni dadın! Öz Qovurmamız – Öz
-                dadımız...!  
+                dadımız...!
               </p>
             </div>
             <div className={styles.social_icons}>
@@ -52,7 +55,7 @@ const Footer = () => {
                 <FaPhoneVolume />
               </div>
               <div className={styles.contact_phones_link}>
-                <h3>Phones : </h3>
+                <h3>Telefon : </h3>
                 <h3 className={styles.contact_phones_number}>
                   +994 50 888 20 60
                 </h3>

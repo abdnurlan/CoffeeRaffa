@@ -130,7 +130,7 @@ const ProductShop = () => {
         </div>
         {data.length > displayCount && (
           <div className={styles.button} onClick={handleShowMore}>
-            {isLoading ? "Loading..." : "Daha çox göstər"}
+            {isLoading ? "Yüklənir..." : "Daha çox göstər"}
           </div>
         )}
       </div>

@@ -19,8 +19,8 @@ const BasketHeader = () => {
             </div>
         </div>
         <div className={styles.basket_header_social}>
-            <Link to="https://www.youtube.com/@elnurtarverdiyev3941"><FaYoutube /></Link>
-            <Link to="https://www.instagram.com/coffee.raffa/"><FaInstagram /></Link>
+            <Link to="https://www.youtube.com/@elnurtarverdiyev3941" target='_blank'><FaYoutube /></Link>
+            <Link to="https://www.instagram.com/coffee.raffa/" target='_blank'><FaInstagram /></Link>
         </div>
       </div>
     </div>
