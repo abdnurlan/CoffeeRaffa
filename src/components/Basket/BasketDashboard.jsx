@@ -44,12 +44,15 @@ const BasketDashboard = () => {
   }, [cart, dispatch]);
 
   const generateWhatsAppMessage = () => {
-    const message = cart.cartItems.map(item => `${item.name}: \t${item.cartQuantity} × ${item.grammage} = ${(item.price * item.cartQuantity).toFixed(2)} ₼`).join('%0A%0A');
-    const totalPrice = `Ümumi qiymət : ${cartTotalAmount.toFixed(2)} ₼`;
-    const whatsappLink = `https://wa.me/+994508882060/?text=Sifariş%20Detalları:%0A%0A${message}%0A%0A${totalPrice}`;
+    const message = cart.cartItems.map(item => `${item.name}: ${item.cartQuantity} × ${item.grammage} = ${(item.price * item.cartQuantity).toFixed(2)} ₼`).join('%0A%0A');
+    const totalPrice = `Ümumi qiymət: ${cartTotalAmount.toFixed(2)} ₼`;
+    const whatsappLink = `https://wa.me/+994508882060/?text=${encodeURIComponent(`Sifariş Detalları:\n\n${message}\n\n${totalPrice}`)}`;
+
     window.open(whatsappLink, '_blank');
 
-    dispatch(resetCart());
+    setTimeout(() => {
+      dispatch(resetCart());
+    }, 1000);  // Add a delay before resetting the cart
   };
 
   return (
