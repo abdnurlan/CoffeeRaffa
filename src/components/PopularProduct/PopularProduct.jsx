@@ -3,38 +3,41 @@ import styles from './PopularProduct.module.css';
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../../features/cartSlice';
 import { Link } from 'react-router-dom';
-import {API_data} from '../../data/data.jsx'
+import { API_data } from '../../data/data.jsx';
 
 const PopularProduct = () => {
   const [currentProductIndex, setCurrentProductIndex] = useState(0);
   const [isChangingProduct, setIsChangingProduct] = useState(false);
   const [data, setData] = useState([]);
-  const [addedToCart, setAddedToCart] = useState(Array(data.length).fill(false));
+  const [addedToCart, setAddedToCart] = useState([]);
   const dispatch = useDispatch();
 
   const fiveStarProducts = data.filter(product => product.star === 5);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setIsChangingProduct(true);
-      setTimeout(() => {
-        setCurrentProductIndex(prevIndex =>
-          prevIndex === fiveStarProducts.length - 1 ? 0 : prevIndex + 1
-        );
-        setIsChangingProduct(false);
-      }, 500);
+      if (fiveStarProducts.length > 0) {
+        setIsChangingProduct(true);
+        setTimeout(() => {
+          setCurrentProductIndex(prevIndex =>
+            prevIndex === fiveStarProducts.length - 1 ? 0 : prevIndex + 1
+          );
+          setIsChangingProduct(false);
+        }, 500);
+      }
     }, 5000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [fiveStarProducts.length]);
 
   useEffect(() => {
     const getData = async () => {
       try {
         const fetchedData = await API_data();
         setData(fetchedData);
+        setAddedToCart(Array(fetchedData.length).fill(false));
       } catch (error) {
-        setError(error);
+        console.error(error);
       }
     };
     getData();
