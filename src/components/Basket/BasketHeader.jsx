@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './Basket.module.css'
-import { FaInstagram, FaYoutube } from 'react-icons/fa6'
+import { FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa6'
 import { Link } from 'react-router-dom'
 
 const BasketHeader = () => {
@@ -21,6 +21,7 @@ const BasketHeader = () => {
         <div className={styles.basket_header_social}>
             <Link to="https://www.youtube.com/@elnurtarverdiyev3941" target='_blank'><FaYoutube /></Link>
             <Link to="https://www.instagram.com/coffee.raffa/" target='_blank'><FaInstagram /></Link>
+            <Link to="https://www.facebook.com/profile.php?id=61561011951111&mibextid=ZbWKwL" target='_blank'><FaFacebook /></Link>
         </div>
       </div>
     </div>

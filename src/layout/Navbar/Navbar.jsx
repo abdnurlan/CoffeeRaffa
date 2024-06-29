@@ -3,7 +3,7 @@ import styles from './Navbar.module.css';
 import Header from '../../components/Header/Header';
 import Logo from '/assets/kaffa_logo.png';
 import Logo_Light from '/assets/kaffa_logo_light.png';
-import { FaBagShopping, FaBars, FaInstagram, FaYoutube } from 'react-icons/fa6';
+import { FaBagShopping, FaBars, FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa6';
 import { FaTimes } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
@@ -55,6 +55,11 @@ const Navbar = () => {
               <a href="https://www.youtube.com/@elnurtarverdiyev3941" target="_blank" onClick={closeMenu}>
                 <div className={styles.navbar_media}>
                   <FaYoutube />
+                </div>
+              </a>
+              <a href="https://www.facebook.com/profile.php?id=61561011951111&mibextid=ZbWKwL" target="_blank" onClick={closeMenu}>
+                <div className={styles.navbar_media}>
+                  <FaFacebook />
                 </div>
               </a>
             </div>

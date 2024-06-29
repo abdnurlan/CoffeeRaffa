@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./Footer.module.css";
 import Logo from "/assets/kaffa_logo.png";
-import { FaInstagram, FaLocationDot, FaPhoneVolume, FaYoutube } from "react-icons/fa6";
+import { FaFacebook, FaInstagram, FaLocationDot, FaPhoneVolume, FaYoutube } from "react-icons/fa6";
 
 const Footer = () => {
   return (
@@ -36,6 +36,13 @@ const Footer = () => {
                 rel="noopener noreferrer"
               >
                 <FaInstagram />
+              </a>
+              <a
+                href="https://www.facebook.com/profile.php?id=61561011951111&mibextid=ZbWKwL"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaFacebook />
               </a>
             </div>
           </div>
