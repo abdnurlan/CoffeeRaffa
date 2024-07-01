@@ -52,7 +52,7 @@ const BasketDashboard = () => {
 
     setTimeout(() => {
       dispatch(resetCart());
-    }, 1000);  // Add a delay before resetting the cart
+    }, 1000);
   };
 
   return (

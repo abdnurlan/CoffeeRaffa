@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import styles from './Navbar.module.css';
 import Header from '../../components/Header/Header';
 import Logo from '/assets/kaffa_logo.png';
-import Logo_Light from '/assets/kaffa_logo_light.png';
 import { FaBagShopping, FaBars, FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa6';
 import { FaTimes } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
@@ -63,9 +62,11 @@ const Navbar = () => {
                 </div>
               </a>
             </div>
-            <div className={`${styles.navbar_logo} ${styles.navbar_logo_main}`}>
-              <img src={Logo} alt="logo" />
-            </div>
+            <Link to="/">
+              <div className={`${styles.navbar_logo} ${styles.navbar_logo_main}`}>
+                <img src={Logo} alt="logo" />
+              </div>
+            </Link>
             <div className={styles.navbar_basket}>
               <div className={styles.product_counter}>
                 <span>{cartTotalQuantity}</span>
@@ -84,9 +85,11 @@ const Navbar = () => {
             <div className={`${styles.times}`} onClick={handleClick}>
               {clicked ? <FaTimes className={styles.times_icon} /> : ''}
             </div>
-            <div className={`${styles.navbar_links_logo} ${styles.navbar_logo}`}>
-              <img src={Logo_Light} alt="logo" />
-            </div>
+            <Link to="/">
+              <div className={`${styles.navbar_links_logo} ${styles.navbar_logo}`}>
+                <img src={Logo} alt="logo" />
+              </div>
+            </Link>
             <div className={styles.navbar_mobile}>
               <ul>
                 <li><a href="#header" onClick={closeMenu}>Ana Səhifə</a></li>
