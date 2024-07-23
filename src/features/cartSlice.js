@@ -20,7 +20,7 @@ const cartSlice = createSlice({
           position: "top-right",
         });
       } else {
-        const defaultGrammage = "0.125kg";
+        const defaultGrammage = "0.250kg";
         const tempProduct = {
           ...action.payload,
           cartQuantity: 1,

@@ -127,7 +127,7 @@ const PopularProduct = () => {
                 </>
               ) : (
                 <div className={styles.original_price_green}>
-                  <span>{currentProduct.prices["0.125kg"]} ₼</span>
+                  <span>{currentProduct.prices["0.250kg"]} ₼</span>
                 </div>
               )}
             </div>

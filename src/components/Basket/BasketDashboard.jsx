@@ -6,7 +6,7 @@ import { FaAngleDown, FaAngleUp } from 'react-icons/fa';
 import { CiCircleRemove } from 'react-icons/ci';
 import { addToCart, decreaseCart, removeFromCart, changeGrammage, getTotals, resetCart } from '../../features/cartSlice';
 
-const grammages = ["0.125kg", "0.500kg", "1kg"];
+const grammages = ["0.250kg", "0.500kg", "1kg"];
 
 const BasketDashboard = () => {
   const cart = useSelector((state) => state.cart);
