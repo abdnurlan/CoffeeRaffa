@@ -1,12 +1,5 @@
 import React, { useEffect, useState } from "react";
 import styles from "./Superiority.module.css";
-import Cup from "/assets/cup.jpg";
-import Superiority_1 from "/assets/superiority_1.png";
-import Superiority_2 from "/assets/superiority_2.png";
-import Superiority_3 from "/assets/superiority_3.png";
-import Superiority_4 from "/assets/superiority_4.png";
-import Superiority_5 from "/assets/superiority_5.png";
-import Superiority_6 from "/assets/superiority_6.png";
 
 const Superiority = () => {
   const [showCup, setShowCup] = useState(false);
@@ -33,7 +26,7 @@ const Superiority = () => {
         <div className={`${styles.first_part} ${styles.animate}`}>
           <div className={styles.item}>
             <div className={styles.image}>
-              <img src={Superiority_1} alt="superiority" />
+              <img src="/assets/superiority_1.png" alt="superiority" />
             </div>
             <div className={styles.item_info}>
               <h6 className={styles.item_h6}>Saf Növlər</h6>
@@ -45,7 +38,7 @@ const Superiority = () => {
           </div>
           <div className={styles.item}>
             <div className={styles.image}>
-              <img src={Superiority_2} alt="superiority" />
+              <img src="/assets/superiority_2.png" alt="superiority" />
             </div>
             <div className={styles.item_info}>
               <h6 className={styles.item_h6}>Geniş Çeşidlər</h6>
@@ -56,7 +49,7 @@ const Superiority = () => {
           </div>
           <div className={styles.item}>
             <div className={styles.image}>
-              <img src={Superiority_3} alt="superiority" />
+              <img src="/assets/superiority_3.png" alt="superiority" />
             </div>
             <div className={styles.item_info}>
               <h6 className={styles.item_h6}>Doğru Qovurma</h6>
@@ -74,12 +67,12 @@ const Superiority = () => {
             transition: "transform 1s",
           }}
         >
-          <img src={Cup} alt="coffee" />
+          <img src="/assets/cup.jpg" alt="coffee" />
         </div>
         <div className={`${styles.second_part} ${styles.animate}`}>
           <div className={styles.item}>
             <div className={styles.image}>
-              <img src={Superiority_4} alt="superiority" />
+              <img src="/assets/superiority_4.png" alt="superiority" />
             </div>
             <div className={styles.item_info}>
               <h6 className={styles.item_h6}>Yüksək Keyfiyyət</h6>
@@ -91,7 +84,7 @@ const Superiority = () => {
           </div>
           <div className={styles.item}>
             <div className={styles.image}>
-              <img src={Superiority_5} alt="superiority" />
+              <img src="/assets/superiority_5.png" alt="superiority" />
             </div>
             <div className={styles.item_info}>
               <h6 className={styles.item_h6}>Mükəmməl Dəyirman</h6>
@@ -103,7 +96,7 @@ const Superiority = () => {
           </div>
           <div className={styles.item}>
             <div className={styles.image}>
-              <img src={Superiority_6} alt="superiority" />
+              <img src="/assets/superiority_6.png" alt="superiority" />
             </div>
             <div className={styles.item_info}>
               <h6 className={styles.item_h6}>Möhtəşəm Aroma</h6>

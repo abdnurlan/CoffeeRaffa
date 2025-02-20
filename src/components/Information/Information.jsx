@@ -1,7 +1,5 @@
 import React from "react";
 import styles from "./Information.module.css";
-import Information_Girl from "/assets/information_girl.jpg";
-import { FaFileAlt, FaPhoneSquareAlt } from "react-icons/fa";
 
 const Information = () => {
   return (
@@ -39,7 +37,8 @@ const Information = () => {
             <div className={styles.heading_inner}>
               <h3>2024</h3>
             </div>
-            <img src={Information_Girl} alt="girl" className="girl_image" />
+            <img src="/assets/information_girl.jpg"
+             alt="girl" className="girl_image" />
           </div>
         </div>
       </div>

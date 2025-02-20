@@ -12,7 +12,7 @@ const Footer = () => {
           <div className={styles.footer_social}>
             <Link to="/">
               <div className={styles.footer_img}>
-                <img src={Logo} alt="logo" />
+                <img src="/assets/kaffa_logo.png" alt="logo" />
               </div>
             </Link>
             <div className={styles.footer_text}>
