@@ -248,6 +248,9 @@ const BasketDashboard = () => {
                 <p>Ümumi qiymət : {cartTotalAmount.toFixed(2)} ₼</p>
               </div>
             </div>
+            <div className={styles.delivery_info}>
+              <p>Şəhərdaxili Çatdırılma 3 ₼</p>
+            </div>
             <div className={styles.let_order}>
               <button onClick={generateWhatsAppMessage}>Sifariş et</button>
             </div>
