@@ -31,8 +31,8 @@ const WatchVideo = () => {
                   </span>
                   <div className={styles.video_wrapper}>
                     <iframe
-                    className={styles.video}
-                      src="https://www.youtube.com/embed/bMKNNf5vBMg?si=pUZlcjR_b6d0BepD"
+                      className={styles.video}
+                      src="https://www.youtube.com/embed/ry55AZ5TRC4?si=whEJ9mMz2w2TBwt2"
                       title="YouTube video player"
                       frameborder="0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
