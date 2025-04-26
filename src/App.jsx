@@ -9,6 +9,7 @@ import Error from "./components/Error/Error";
 import Home from "./components/Home";
 import Footer from "./layout/Footer/Footer";
 import Navbar from "./layout/Navbar/Navbar";
+import AdminPage from "./components/AdminPage/AdminPage";
 
 function App() {
   const [showGoTopButton, setShowGoTopButton] = useState(false);
@@ -41,6 +42,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/basket" element={<Basket />} />
         <Route path="*" element={<Error />} />
+        <Route path="/admin" element={<AdminPage />} />
       </Routes>
       <Footer />
       {showGoTopButton && (
