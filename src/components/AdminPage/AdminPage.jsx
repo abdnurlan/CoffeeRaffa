@@ -291,19 +291,18 @@ const AdminPage = () => {
       )}
       <div className={styles.adminHeader}>
         <h1>Coffee Raffa Admin Panel</h1>
-        <button onClick={handleLogout} className={styles.logoutButton}>
-          Çıxış
-        </button>
+        <div className={styles.adminActions}>
+          <button onClick={handleCreateClick} className={styles.createButton}>
+            Yeni Qəhvə Əlavə Et
+          </button>
+          <button onClick={handleLogout} className={styles.logoutButton}>
+            Çıxış
+          </button>
+        </div>
       </div>
 
       {!showForm ? (
         <div className={styles.coffeeManagement}>
-          <div className={styles.adminActions}>
-            <button onClick={handleCreateClick} className={styles.createButton}>
-              Yeni Qəhvə Əlavə Et
-            </button>
-          </div>
-
           {loading ? (
             <p>Yüklənir...</p>
           ) : (

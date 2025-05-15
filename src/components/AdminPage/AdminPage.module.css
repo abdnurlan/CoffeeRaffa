@@ -8,7 +8,23 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 30px;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.adminActions {
+  position: sticky;
+  top: 70px;
+  background-color: white;
+  padding: 1rem;
+  z-index: 99;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .adminHeader h1 {
@@ -18,18 +34,31 @@
 
 .logoutButton,
 .createButton {
-  background-color: #5d4037;
-  color: white;
-  padding: 8px 16px;
+  padding: 10px 20px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  font-weight: bold;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+  margin-right: 10px;
 }
 
-.logoutButton:hover,
+.createButton {
+  background-color: #4caf50;
+  color: white;
+}
+
+.logoutButton {
+  background-color: #f44336;
+  color: white;
+}
+
 .createButton:hover {
-  background-color: #3e2723;
+  background-color: #45a049;
+}
+
+.logoutButton:hover {
+  background-color: #da190b;
 }
 
 .coffeeList {
@@ -300,4 +329,21 @@
 
 .closeNotification:hover {
   opacity: 0.7;
+}
+
+@media screen and (max-width: 768px) {
+  .adminHeader {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .adminActions {
+    top: 120px;
+  }
+
+  .createButton,
+  .logoutButton {
+    width: 100%;
+    margin: 5px 0;
+  }
 }
