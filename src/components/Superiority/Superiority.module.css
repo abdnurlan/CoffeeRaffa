@@ -1,6 +1,9 @@
-.cup img {
-    width: 660px;
-    filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.4));
+.cup {
+    width: 500px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 @keyframes cupFloat {
@@ -37,27 +40,11 @@
     text-align: right;
 }
 
-.first_part {
-    transition: transform 1s ease-out;
-    transform: translateX(-100%);
-}
-
-.second_part {
-    transition: transform 1s ease-out;
-    transform: translateX(100%);
-}
-
-.superior_container.animate .first_part {
-    transform: translateX(0);
-}
-
-.superior_container.animate .second_part {
-    transform: translateX(0);
-}
-
 .image img {
     width: 70px;
     height: 70px;
+    mix-blend-mode: screen;
+    filter: brightness(1.1);
 }
 
 .item {

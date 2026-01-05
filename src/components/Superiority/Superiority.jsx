@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styles from "./Superiority.module.css";
+import CoffeeScene3D from "./CoffeeScene3D";
 
 const Superiority = () => {
   const [showCup, setShowCup] = useState(false);
@@ -68,7 +69,7 @@ const Superiority = () => {
             transition: "transform 1s",
           }}
         >
-          <img src="/assets/coffeeraffa_cup_vector_2026.png" alt="premium CoffeeRaffa cup" />
+          <CoffeeScene3D />
         </div>
         <div className={`${styles.second_part} ${styles.animate}`}>
           <div className={styles.item}>

@@ -52,36 +52,58 @@
 .image_frame {
   position: relative;
   display: inline-block;
-  padding: 20px;
-  background: white;
-  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  padding: 30px;
+  background: transparent;
+  border-radius: 20px;
+  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
+/* Əsas parlaq yaşıl-qızılı qradient blob */
 .image_frame::before {
   content: '';
   position: absolute;
-  inset: -30px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
   background:
-    repeating-linear-gradient(-45deg,
-      transparent,
-      transparent 10px,
-      rgba(77, 139, 85, 0.15) 10px,
-      rgba(77, 139, 85, 0.15) 11px);
+    radial-gradient(ellipse 80% 80% at 30% 20%, rgba(77, 139, 85, 0.5) 0%, transparent 50%),
+    radial-gradient(ellipse 60% 60% at 70% 80%, rgba(184, 156, 89, 0.4) 0%, transparent 50%),
+    radial-gradient(ellipse 90% 90% at 50% 50%, rgba(77, 139, 85, 0.25) 0%, transparent 60%);
+  border-radius: 50%;
+  z-index: -2;
+  filter: blur(40px);
+  animation: pulseGlow 4s ease-in-out infinite;
+}
+
+/* Animasiyalı halqa */
+.image_frame::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 95%;
+  height: 95%;
+  border: 2px dashed rgba(77, 139, 85, 0.4);
+  border-radius: 50%;
   z-index: -1;
-  border-radius: 12px;
-  opacity: 0;
-  transition: opacity 0.4s ease, inset 0.4s ease;
+  animation: rotateRing 25s linear infinite;
 }
 
 .image_frame:hover {
-  transform: translateY(-10px);
+  transform: translateY(-12px) scale(1.02);
 }
 
 .image_frame:hover::before {
+  filter: blur(50px);
+  animation: pulseGlowHover 2s ease-in-out infinite;
+}
+
+.image_frame:hover::after {
   opacity: 1;
-  inset: -15px;
+  transform: translateX(10px);
 }
 
 .image_frame img {
