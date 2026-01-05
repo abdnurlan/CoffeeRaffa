@@ -5,6 +5,8 @@
   padding: 120px 0px;
   justify-content: space-between;
   background: radial-gradient(circle at 10% 10%, rgba(77, 139, 85, 0.05), transparent 40%);
+  overflow: hidden;
+  position: relative;
 }
 
 .texts {
@@ -42,7 +44,8 @@
   align-items: center;
   justify-content: center;
   perspective: 1200px;
-  overflow: hidden;
+  overflow: visible;
+  max-width: 100%;
 }
 
 .images img {
@@ -188,7 +191,7 @@
 .heading_inner {
   position: absolute;
   top: 10%;
-  left: 0%;
+  left: 5%;
   background-color: white;
   border-radius: 50%;
   width: 170px;
@@ -198,6 +201,7 @@
   align-items: center;
   justify-content: center;
   box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.1);
+  z-index: 2;
 }
 
 .heading_inner h5 {
