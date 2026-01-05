@@ -3,6 +3,31 @@
     flex-direction: column;
     align-items: center;
     padding-bottom: 100px;
+    padding-top: 100px;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+    align-items: center;
+    padding-bottom: 60px;
+}
+
+.header_h6 h6 {
+    font-size: 0.85rem;
+    color: var(--color-saffron);
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+.header_h3 h3 {
+    font-size: clamp(2.25rem, 4.5vw, 3.5rem);
+    font-weight: 600;
+    font-family: var(--ff-display);
+    letter-spacing: 0.04em;
 }
 
 .products_list {
@@ -18,7 +43,17 @@
     text-align: center;
     display: flex;
     flex-direction: column;
-    padding-bottom: 50px;
+    padding: 20px;
+    background: white;
+    border-radius: 32px;
+    box-shadow: var(--shadow-soft, 0 10px 30px rgba(0, 0, 0, 0.05));
+    transition: all 0.4s ease;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.product:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 
 .product_info {
@@ -33,20 +68,30 @@
 
 .product .product_img_container {
     position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    border-radius: 24px;
+    background-color: #f3eee8;
 }
 
 .product .product_img_container .product_shadow {
     position: absolute;
     inset: 0;
     opacity: 0;
-    background: rgba(239, 239, 239, 0.3);
+    background: rgba(0, 0, 0, 0.25);
     transition: all 0.5s ease;
 }
 
 .product img {
     width: 100%;
-    background-color: #f3eee8;
-    padding: 50px 0px;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.product .product_img_container:hover img {
+    transform: scale(1.06);
 }
 
 .product .product_img_container .hover_btn {
@@ -113,43 +158,6 @@
     display: inline-block;
 }
 
-.product_prices {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    justify-content: center;
-}
-
-.original_price {
-    color: #adadad !important;
-    font-size: 16px;
-    font-weight: 700;
-    position: relative;
-}
-
-.original_price::after {
-    position: absolute;
-    content: "";
-    background: #adadad;
-    width: 100%;
-    height: 2px;
-    left: 0%;
-    bottom: 45%;
-}
-
-.original_price_green {
-    color: #4d8b55;
-    font-size: 16px;
-    font-weight: 700;
-    position: relative;
-}
-
-.discount_price {
-    color: #d12323 !important;
-    font-size: 16px;
-    font-weight: 700;
-    position: relative;
-}
 
 .button {
     border: 0px;
@@ -230,7 +238,7 @@
         top: 0px;
     }
 
-    .product_shadow{
+    .product_shadow {
         display: none;
     }
 }

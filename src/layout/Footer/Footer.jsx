@@ -77,7 +77,7 @@ const Footer = () => {
       <div className={styles.footer_copyright}>
         <div className="container">
           <h6 className={styles.copyright_text}>
-            Copyright © 2024 | Nurlan Abdullayev
+            Copyright © 2026 | Nurlan Abdullayev
           </h6>
         </div>
       </div>

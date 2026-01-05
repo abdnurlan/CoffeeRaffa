@@ -8,37 +8,29 @@ const Information = () => {
         <div className={styles.information}>
           <div className={styles.texts}>
             <div className={`${styles.green_word} ${styles["h3"]}`}>
-              <h3>CoffeeRaffa olaraq</h3>
+              <h3>Coffeeraffa:</h3>
             </div>
             <div className={styles["h3"]}>
-              <h3>ilk öncə məqsədimiz </h3>
+              <h3>Mükəmməl Qovurma sənəti</h3>
             </div>
             <div className={styles.paragraph}>
               <p>
-                sizə təzə qovrulmuş qəhvə dənələrimizi təqdim etməkdir. Ola
-                bilsin sizdə müasir qəhvə dəmləyən aparat və məşhur brendin
-                qəhvəsi var. Amma, sizin istifadə etdiyiniz qəhvənin qovrulduğu
-                tarix 1 ayı keçirsə, artıq siz əsl qəhvə dadından, tamından,
-                qoxusundan məhrum olursunuz.
+                Artıq 3 ildən çoxdur ki, biz sizə ən seçilmiş, təzə qovrulmuş qəhvə
+                dənələrini təqdim edirik. 2026-cı ildə hədəfimiz sadəcə qəhvə satmaq deyil,
+                hər fincanda əsl qəhvə mədəniyyətini yaşatmaqdır. İstifadə etdiyiniz qəhvənin
+                qovrulduğu tarixdən 1 ay keçibsə, siz əsl aromadan məhrum olursunuz.
               </p>
             </div>
             <div className={styles.icons}>
-              {/* <div className={styles.icon}>
-                <FaFileAlt className={styles.svg} />
-                <h6>Download price</h6>
-              </div>
-              <div className={styles.icon}>
-                <FaPhoneSquareAlt className={styles.svg} />
-                <h6>3-068-387-01-39</h6>
-              </div> */}
             </div>
           </div>
           <div className={styles.images}>
-            <div className={styles.heading_inner}>
-              <h3>2024</h3>
+            <div className={styles.image_frame}>
+              <img
+                src="/assets/coffeeraffa_girl_branded_2026.png"
+                alt="coffee culture 2026"
+              />
             </div>
-            <img src="/assets/information_girl.jpg"
-             alt="girl" className="girl_image" />
           </div>
         </div>
       </div>

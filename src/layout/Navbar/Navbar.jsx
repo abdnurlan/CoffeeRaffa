@@ -46,11 +46,12 @@ const Navbar = () => {
   return (
     <>
       <div className={styles.background}>
+        {clicked && (
+          <div className={styles.scrim} onClick={closeMenu} aria-hidden="true" />
+        )}
         <div className="container">
           <div className={styles.navbar_header}>
             <div className={styles.navbar_medias}>
-              <h4>Bizi İzləyin</h4>
-              <div className={styles.line}></div>
               <a
                 href="https://www.instagram.com/coffee.raffa/"
                 target="_blank"
@@ -79,13 +80,35 @@ const Navbar = () => {
                 </div>
               </a>
             </div>
-            <Link to="/">
-              <div
-                className={`${styles.navbar_logo} ${styles.navbar_logo_main}`}
-              >
-                <img src="/assets/kaffa_logo.png" alt="logo" />
+            <div
+              className={`${styles.navbar_links} ${clicked ? `${styles.active}` : ""
+                }`}
+            >
+              <div className={styles.navbar_mobile}>
+                <ul>
+                  <li>
+                    <a href="#header" onClick={closeMenu}>
+                      ANA SƏHİFƏ
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#about" onClick={closeMenu}>
+                      HAQQIMIZDA
+                    </a>
+                  </li>
+                  <li>
+                    <Link to="/products" onClick={closeMenu}>
+                      MƏHSULLAR
+                    </Link>
+                  </li>
+                  <li>
+                    <a href="#contact" onClick={closeMenu}>
+                      ƏLAQƏ
+                    </a>
+                  </li>
+                </ul>
               </div>
-            </Link>
+            </div>
             <div className={styles.navbar_basket}>
               <div className={styles.product_counter}>
                 <span>{cartTotalQuantity}</span>
@@ -95,59 +118,39 @@ const Navbar = () => {
                   <FaBagShopping />
                 </div>
               </Link>
-              <div className={`${styles.hamburger}`} onClick={handleClick}>
-                {clicked ? "" : <FaBars className={styles.hamburger_icon} />}
-              </div>
+              <button
+                type="button"
+                className={styles.hamburger}
+                onClick={handleClick}
+                aria-label="Menyunu aç"
+                aria-expanded={clicked}
+              >
+                {clicked ? (
+                  <FaTimes className={styles.hamburger_icon} />
+                ) : (
+                  <FaBars className={styles.hamburger_icon} />
+                )}
+              </button>
             </div>
           </div>
           <div
-            className={`${styles.navbar_links} ${
-              clicked ? `${styles.active}` : ""
-            }`}
+            className={`${styles.navbar_links_mobile} ${clicked ? `${styles.active}` : ""
+              }`}
           >
-            <div className={`${styles.times}`} onClick={handleClick}>
-              {clicked ? <FaTimes className={styles.times_icon} /> : ""}
-            </div>
             <Link to="/">
-              <div
-                className={`${styles.navbar_links_logo} ${styles.navbar_logo}`}
-              >
+              <div className={`${styles.navbar_links_logo} ${styles.navbar_logo}`}>
                 <img src="/assets/kaffa_logo.png" alt="logo" />
               </div>
             </Link>
-            <div className={styles.navbar_mobile}>
-              <ul>
-                <li>
-                  <a href="#header" onClick={closeMenu}>
-                    Ana Səhifə
-                  </a>
-                </li>
-                <li>
-                  <a href="#about" onClick={closeMenu}>
-                    Haqqımızda
-                  </a>
-                </li>
-                <li>
-                  <a href="#products" onClick={closeMenu}>
-                    Məhsullar
-                  </a>
-                </li>
-                <li>
-                  <a href="#contact" onClick={closeMenu}>
-                    Əlaqə
-                  </a>
-                </li>
-              </ul>
-              <div className={styles.basket_mobile}>
-                <div className={styles.product_counter_mobile}>
-                  <span>{cartTotalQuantity}</span>
-                </div>
-                <Link to="/basket" onClick={closeMenu}>
-                  <div className={styles.basket_mobile_icon}>
-                    <FaBagShopping />
-                  </div>
-                </Link>
+            <div className={styles.basket_mobile}>
+              <div className={styles.product_counter_mobile}>
+                <span>{cartTotalQuantity}</span>
               </div>
+              <Link to="/basket" onClick={closeMenu}>
+                <div className={styles.basket_mobile_icon}>
+                  <FaBagShopping />
+                </div>
+              </Link>
             </div>
           </div>
           <Header></Header>

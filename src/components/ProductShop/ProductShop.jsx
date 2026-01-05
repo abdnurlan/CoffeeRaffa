@@ -6,13 +6,9 @@ import { addToCart } from "../../features/cartSlice";
 import { API_data } from "../../data/data.jsx";
 
 const ProductShop = () => {
-  const [displayCount, setDisplayCount] = useState(4);
-  const [isLoading, setIsLoading] = useState(false);
-  const [cartOpen, setCartOpen] = useState(false);
+  const [displayCount, setDisplayCount] = useState(8);
   const [data, setData] = useState([]);
-  const [cartButtons, setCartButtons] = useState(
-    Array(data.length).fill(false)
-  );
+  const [cartButtons, setCartButtons] = useState([]);
   const dispatch = useDispatch();
   const [error, setError] = useState(null);
 
@@ -21,6 +17,7 @@ const ProductShop = () => {
       try {
         const fetchedData = await API_data();
         setData(fetchedData);
+        setCartButtons(Array(fetchedData.length).fill(false));
       } catch (error) {
         setError(error);
       }
@@ -57,17 +54,18 @@ const ProductShop = () => {
     );
   };
 
-  const handleShowMore = () => {
-    setIsLoading(true);
-    setTimeout(() => {
-      setDisplayCount((prevCount) => prevCount + 4);
-      setIsLoading(false);
-    }, 2000);
-  };
 
   return (
-    <div className="container">
+    <div className="container" id="products">
       <div className={styles.shop_container}>
+        <div className={styles.header}>
+          <div className={styles.header_h6}>
+            <h6>Onlayn Mağaza</h6>
+          </div>
+          <div className={styles.header_h3}>
+            <h3 className="display-font">Məhsullarımız</h3>
+          </div>
+        </div>
         <div className={styles.products_list}>
           {data.slice(0, displayCount).map((product, index) => (
             <div key={product.id} className={styles.product}>
@@ -90,28 +88,6 @@ const ProductShop = () => {
               <div className={styles.product_info}>
                 {renderStars(product.star)}
                 <h3>{product.name}</h3>
-                <div className={styles.product_prices}>
-                  {product.discount_price ? (
-                    <>
-                      <div
-                        className={`${styles.original_price} ${
-                          product.discount_price
-                            ? ""
-                            : styles.original_price_green
-                        }`}
-                      >
-                        <span>{`${product.price}`}</span>
-                      </div>
-                      <div className={styles.discount_price}>
-                        <span>{`$${product.discount_price}`}</span>
-                      </div>
-                    </>
-                  ) : (
-                    <div className={styles.original_price_green}>
-                      <span>{`${product.prices["0.500kg"]} ₼`}</span>
-                    </div>
-                  )}
-                </div>
                 {cartButtons[index] ? (
                   <Link to="/basket" className={styles.hover_btn_mobile}>
                     Səbətə bax
@@ -129,9 +105,9 @@ const ProductShop = () => {
           ))}
         </div>
         {data.length > displayCount && (
-          <div className={styles.button} onClick={handleShowMore}>
-            {isLoading ? "Yüklənir..." : "Daha çox göstər"}
-          </div>
+          <Link to="/products" className={styles.button}>
+            Daha çox göstər
+          </Link>
         )}
       </div>
     </div>

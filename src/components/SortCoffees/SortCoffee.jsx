@@ -20,19 +20,18 @@ const SortCoffee = () => {
                 <div
                   className={styles.coffee_image}
                   style={{
-                    backgroundImage: `url("/assets/colombia.webp")`,
+                    backgroundImage: `url("/assets/colombia_2026.png")`,
                     backgroundPosition: "50%",
                   }}
                 ></div>
                 <div className={styles.coffee_number}>01</div>
                 <div className={styles.coffee_sort_name}>
-                  <h4>Kolumbiya</h4>
+                  <h4>Kolumbiya Huila</h4>
                 </div>
                 <div className={styles.coffee_sort_info}>
                   <p>
-                    Kolumbiya qəhvələri hamar, yaxşı balanslaşdırılmış ləzzət
-                    profili ilə tanınır və dünya üzrə qəhvə həvəskarları
-                    arasında sevilir.
+                    2026-cı il məhsulu olan Huila qəhvəsi, şokolad və karamel
+                    notları ilə zənginləşdirilmiş ultra-hamar bir profil təqdim edir.
                   </p>
                 </div>
               </div>
@@ -40,18 +39,18 @@ const SortCoffee = () => {
                 <div
                   className={styles.coffee_image}
                   style={{
-                    backgroundImage: `url("/assets/kenia.jpg")`,
+                    backgroundImage: `url("/assets/kenia_2026.png")`,
                     backgroundPosition: "50%",
                   }}
                 ></div>
                 <div className={styles.coffee_number}>02</div>
                 <div className={styles.coffee_sort_name}>
-                  <h4>Keniya</h4>
+                  <h4>Keniya SL28/34</h4>
                 </div>
                 <div className={styles.coffee_sort_info}>
                   <p>
-                    Keniya mənşəli bu AA qəhvəsi, yüksək keyfiyyəti və canlı
-                    turşuluğu ilə tanınan zəngin bir dad təcrübəsi təqdim edir.
+                    Vulkanik torpaqlarda yetişən bu Premium AA dərəcəli qəhvə,
+                    canlı sitrus turşuluğu və böyürtkən dadı ilə seçilir.
                   </p>
                 </div>
               </div>
@@ -59,18 +58,18 @@ const SortCoffee = () => {
                 <div
                   className={styles.coffee_image}
                   style={{
-                    backgroundImage: `url("/assets/ethiopia.jpg")`,
+                    backgroundImage: `url("/assets/ethiopia_2026.png")`,
                     backgroundPosition: "50%",
                   }}
                 ></div>
                 <div className={styles.coffee_number}>03</div>
                 <div className={styles.coffee_sort_name}>
-                  <h4>Efiopiya</h4>
+                  <h4>Efiopiya Yirgacheffe</h4>
                 </div>
                 <div className={styles.coffee_sort_info}>
                   <p>
-                    Efiopiyanın Sidamo bölgəsindən olan bu qəhvə, çiçək notları
-                    və incə meyvə dadları ilə fərqlənir.
+                    Qəhvəni vətəni olan Efiopiyadan gələn bu çeşid, çiçəkli
+                    yasəmən və parlaq limon aroması ilə unikal bir təcrübədir.
                   </p>
                 </div>
               </div>
@@ -78,18 +77,18 @@ const SortCoffee = () => {
                 <div
                   className={styles.coffee_image}
                   style={{
-                    backgroundImage: `url("/assets/guatemalan.webp")`,
+                    backgroundImage: `url("/assets/guatemala_2026.png")`,
                     backgroundPosition: "50%",
                   }}
                 ></div>
                 <div className={styles.coffee_number}>04</div>
                 <div className={styles.coffee_sort_name}>
-                  <h4>Qvatemala</h4>
+                  <h4>Qvatemala Antigua</h4>
                 </div>
                 <div className={styles.coffee_sort_info}>
                   <p>
-                    Qvatemala mənşəli Arabica 100% qəhvəsi, orta qovurulmuş
-                    zəngin və balanslı dad təqdim edir.
+                    Antiqua vulkanlarının yamaclarından toplanan 100% Arabica,
+                    fındıqlı və tünd meyvə notları ilə mükəmməl balansdadır.
                   </p>
                 </div>
               </div>

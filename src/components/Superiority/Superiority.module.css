@@ -1,7 +1,20 @@
 .cup img {
     width: 660px;
+    filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.4));
 }
-  
+
+@keyframes cupFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
 .superior_container {
     display: flex;
     flex-direction: row;
@@ -11,91 +24,108 @@
     padding-bottom: 100px;
     overflow: hidden;
 }
-  
-.first_part, .second_part {
+
+.first_part,
+.second_part {
     display: flex;
     flex-direction: column;
     width: 25%;
     gap: 90px;
 }
-  
+
 .second_part {
     text-align: right;
 }
-  
+
 .first_part {
     transition: transform 1s ease-out;
     transform: translateX(-100%);
 }
-  
+
 .second_part {
     transition: transform 1s ease-out;
     transform: translateX(100%);
 }
-  
+
 .superior_container.animate .first_part {
     transform: translateX(0);
 }
-  
+
 .superior_container.animate .second_part {
     transform: translateX(0);
 }
-  
+
 .image img {
     width: 70px;
     height: 70px;
 }
-  
+
 .item {
     display: flex;
     flex-direction: row;
     gap: 25px;
     align-items: center;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(5px);
+    padding: 20px;
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.4s ease;
 }
-  
+
+.item:hover {
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateY(-5px);
+    border-color: rgba(77, 139, 85, 0.3);
+}
+
 .item_info {
     display: flex;
     gap: 10px;
     flex-direction: column;
 }
-  
+
+.item_info h6 {
+    margin: 0;
+}
+
 .item_text {
     font-size: 14px;
     line-height: 1.5;
     opacity: 0.75;
 }
-  
+
 .item_h6 {
     font-size: 14px;
     font-weight: 700;
 }
-  
+
 @media screen and (max-width: 1440px) {
     .cup img {
-      width: 550px;
+        width: 550px;
     }
 }
-  
+
 @media screen and (max-width: 1200px) {
     .cup img {
-      display: none;
-}
-  
+        display: none;
+    }
+
     .superior_container {
-      flex-direction: column;
+        flex-direction: column;
     }
-  
+
     .first_part {
-      padding-bottom: 90px;
+        padding-bottom: 90px;
     }
-  
-    .first_part, .second_part {
-      width: 100%;
-      text-align: left;
+
+    .first_part,
+    .second_part {
+        width: 100%;
+        text-align: left;
     }
-  
+
     .item {
-      justify-content: center;
+        justify-content: center;
     }
-  }
-  
+}

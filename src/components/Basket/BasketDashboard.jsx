@@ -55,17 +55,14 @@ const BasketDashboard = () => {
     const items = cart.cartItems
       .map(
         (item) =>
-          `${item.name}: ${item.cartQuantity} × ${item.grammage} = ${(
-            item.price * item.cartQuantity
-          ).toFixed(2)} ₼`
+          `${item.name}: ${item.cartQuantity} × ${item.grammage} - ${item.price * item.cartQuantity
+          } ₼`
       )
       .join("\n\n");
 
-    const totalPrice = `Ümumi qiymət: ${cartTotalAmount.toFixed(2)} ₼`;
-
     // Encode the entire message at once
     const encodedMessage = encodeURIComponent(
-      `Sifariş Detalları:\n\n${items}\n\n${totalPrice}`
+      `Sifariş Detalları:\n\n${items}\n\nÜmumi Məbləğ: ${cartTotalAmount} ₼`
     );
     const whatsappLink = `https://wa.me/+994558882060/?text=${encodedMessage}`;
 
@@ -98,11 +95,11 @@ const BasketDashboard = () => {
                   <tr>
                     <th className={styles.gap}></th>
                     <th className={styles.gap}></th>
-                    <th className={styles.product_price}>Məhsul</th>
-                    <th className={styles.product_name}>Qiymət</th>
+                    <th className={styles.product_price_header}>Məhsul</th>
                     <th className={styles.product_quantity}>Say</th>
-                    <th className={styles.product_price}>Ölçü</th>
-                    <th className={styles.product_price}>Cəm</th>
+                    <th className={styles.product_price_header}>Ölçü</th>
+                    <th className={styles.product_price_header}>Qiymət</th>
+                    <th className={styles.product_price_header}>Cəmi</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -118,9 +115,6 @@ const BasketDashboard = () => {
                         <img src={cartItem.img} alt={cartItem.name} />
                       </td>
                       <td className={styles.product_name}>{cartItem.name}</td>
-                      <td className={styles.product_price}>
-                        {cartItem.price} ₼
-                      </td>
                       <td className={styles.product_quantity}>
                         <div className={styles.quantity_container}>
                           <div className={styles.quantity_number}>
@@ -159,23 +153,14 @@ const BasketDashboard = () => {
                           </div>
                         </div>
                       </td>
+                      <td className={styles.product_price}>
+                        {cartItem.price} ₼
+                      </td>
                       <td className={styles.product_subtotal}>
-                        {(cartItem.price * cartItem.cartQuantity).toFixed(2)} ₼
+                        {cartItem.price * cartItem.cartQuantity} ₼
                       </td>
                     </tr>
                   ))}
-                </tbody>
-              </table>
-              <table className={styles.product_total_price}>
-                <thead>
-                  <tr>
-                    <th>Ümumi qiymət</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th>{cartTotalAmount.toFixed(2)} ₼</th>
-                  </tr>
                 </tbody>
               </table>
             </div>
@@ -192,10 +177,6 @@ const BasketDashboard = () => {
                     <div className={styles.product_info_text}>
                       <p>Məhsul :</p>
                       <p className={styles.product_name}>{cartItem.name}</p>
-                    </div>
-                    <div className={styles.product_info_text}>
-                      <p>Qiymət :</p>
-                      <p className={styles.product_price}>{cartItem.price} ₼</p>
                     </div>
                     <div className={styles.product_info_text}>
                       <p>Say :</p>
@@ -236,20 +217,27 @@ const BasketDashboard = () => {
                       </div>
                     </div>
                     <div className={styles.product_info_text}>
-                      <p>Cəm :</p>
+                      <p>Qiymət :</p>
+                      <p>{cartItem.price} ₼</p>
+                    </div>
+                    <div className={styles.product_info_text}>
+                      <p>Cəmi :</p>
                       <p className={styles.product_subtotal}>
-                        {(cartItem.price * cartItem.cartQuantity).toFixed(2)} ₼
+                        {cartItem.price * cartItem.cartQuantity} ₼
                       </p>
                     </div>
                   </div>
                 </div>
               ))}
-              <div className={styles.total_price}>
-                <p>Ümumi qiymət : {cartTotalAmount.toFixed(2)} ₼</p>
-              </div>
             </div>
-            <div className={styles.delivery_info}>
-              <p>Şəhərdaxili Çatdırılma 3 ₼</p>
+            <div className={styles.total_price_footer}>
+              <div className={styles.delivery_info}>
+                <p>Şəhərdaxili Çatdırılma 5 ₼</p>
+              </div>
+              <div className={styles.cart_total}>
+                <span>Ümumi Məbləğ:</span>
+                <h3>{cartTotalAmount} ₼</h3>
+              </div>
             </div>
             <div className={styles.let_order}>
               <button onClick={generateWhatsAppMessage}>Sifariş et</button>

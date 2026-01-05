@@ -195,7 +195,7 @@ const AdminPage = () => {
         showNotification("Qəhvə uğurla əlavə edildi!", "success");
       } else {
         await axios.patch(
-          `https://api.coffeeraffa.az/api/${selectedCoffee.id}/update/`,
+          `https://api.Coffeeraffa.az/api/${selectedCoffee.id}/update/`,
           formData,
           {
             headers: {
@@ -222,7 +222,7 @@ const AdminPage = () => {
   const handleDelete = async (id) => {
     if (window.confirm("Bu qəhvəni silmək istədiyinizdən əminsiniz?")) {
       try {
-        await axios.delete(`https://api.coffeeraffa.az/api/${id}/delete/`, {
+        await axios.delete(`https://api.Coffeeraffa.az/api/${id}/delete/`, {
           headers: {
             Authorization: `Token ${token}`,
           },

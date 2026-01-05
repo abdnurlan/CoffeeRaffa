@@ -29,10 +29,10 @@ const Superiority = () => {
               <img src="/assets/superiority_1.png" alt="superiority" />
             </div>
             <div className={styles.item_info}>
-              <h6 className={styles.item_h6}>Saf Növlər</h6>
+              <h6 className={styles.item_h6}>Eksklüziv Növlər</h6>
               <p className={styles.item_text}>
-                Qəhvə bitkisi subtropik bölgələrdə bitən və yüksək
-                hündürlüklərdə daha keyfiyyətli olan bitkidir.
+                Yalnız ən yüksək hündürlüklərdə, xüsusi mikro-iqlimlərdə
+                yetişdirilən tək mənşəli (single-origin) qəhvə dənələri.
               </p>
             </div>
           </div>
@@ -41,9 +41,10 @@ const Superiority = () => {
               <img src="/assets/superiority_2.png" alt="superiority" />
             </div>
             <div className={styles.item_info}>
-              <h6 className={styles.item_h6}>Geniş Çeşidlər</h6>
+              <h6 className={styles.item_h6}>Qlobal Kolleksiya</h6>
               <p className={styles.item_text}>
-                Dünyada ən məşhur qəhvə növləri Arabica və Robustadır.{" "}
+                Dünyanın ən nüfuzlu plantasiyalarından birbaşa
+                tədarük edilən Specialty dərəcəli qəhvə çeşidləri.
               </p>
             </div>
           </div>
@@ -52,10 +53,10 @@ const Superiority = () => {
               <img src="/assets/superiority_3.png" alt="superiority" />
             </div>
             <div className={styles.item_info}>
-              <h6 className={styles.item_h6}>Doğru Qovurma</h6>
+              <h6 className={styles.item_h6}>Artizan Qovurma</h6>
               <p className={styles.item_text}>
-                Qəhvə dənələri ətirini və dadını ortaya çıxarır Diqqətlə
-                qızardın.
+                Hər dənənin xarakterini ortaya çıxaran,
+                elmi əsaslı və usta əli ilə idarə olunan qovurma prosesi.
               </p>
             </div>
           </div>
@@ -67,7 +68,7 @@ const Superiority = () => {
             transition: "transform 1s",
           }}
         >
-          <img src="/assets/cup.jpg" alt="coffee" />
+          <img src="/assets/coffeeraffa_cup_vector_2026.png" alt="premium CoffeeRaffa cup" />
         </div>
         <div className={`${styles.second_part} ${styles.animate}`}>
           <div className={styles.item}>
@@ -75,10 +76,10 @@ const Superiority = () => {
               <img src="/assets/superiority_4.png" alt="superiority" />
             </div>
             <div className={styles.item_info}>
-              <h6 className={styles.item_h6}>Yüksək Keyfiyyət</h6>
+              <h6 className={styles.item_h6}>SGS Sertifikatlı</h6>
               <p className={styles.item_text}>
-                Qəhvə sudan başqa dünyada ən çox istehlak edilən içkilərdən
-                biridir.{" "}
+                İstehsalın hər mərhələsində beynəlxalq keyfiyyət və
+                təhlükəsizlik standartlarına tam uyğunluq.
               </p>
             </div>
           </div>
@@ -87,10 +88,10 @@ const Superiority = () => {
               <img src="/assets/superiority_5.png" alt="superiority" />
             </div>
             <div className={styles.item_info}>
-              <h6 className={styles.item_h6}>Mükəmməl Dəyirman</h6>
+              <h6 className={styles.item_h6}>Həssas Üyüdülmə</h6>
               <p className={styles.item_text}>
-                Qəhvənin üyüdülmə dərəcəsi hazırlanma üsulundan və üsulundan
-                asılı olaraq dəyişir bu dada təsir edir.
+                Dərinlik və dad balansını qorumaq üçün ultra-modern
+                dəyirmanlarda mikron səviyyəsində həssas üyüdülmə.
               </p>
             </div>
           </div>
@@ -99,9 +100,10 @@ const Superiority = () => {
               <img src="/assets/superiority_6.png" alt="superiority" />
             </div>
             <div className={styles.item_info}>
-              <h6 className={styles.item_h6}>Möhtəşəm Aroma</h6>
+              <h6 className={styles.item_h6}>Dinamik Aroma</h6>
               <p className={styles.item_text}>
-                Qəhvənin unikal ətri onun tərkibindəki təbii yağlardan gəlir.{" "}
+                Qəhvənin təbii yağlarını qoruyan xüsusi paketləmə
+                ilə gələn möhtəşəm və qalıcı ətir profili.
               </p>
             </div>
           </div>
